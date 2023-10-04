@@ -3,6 +3,12 @@ body {
   font-family: "Inter", var(--bs-font-sans-serif);
 }
 
+@for $level from 1 through 6 {
+  .display-#{$level} {
+    font-family: "Zilla Slab", var(--bs-font-sans-serif);
+  }
+}
+
 .navbar-brand {
   color: var(--oc-gray-8);
 
