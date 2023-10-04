@@ -1,3 +1,12 @@
+a {
+  color: var(--oc-blue-7);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--oc-blue-9);
+  }
+}
+
 body {
   color: var(--oc-gray-9);
   font-family: "Inter", var(--bs-font-sans-serif);
