@@ -1,0 +1,73 @@
+names:
+  - first: Aptenodytes
+    last: Patagonicus
+    email: king@pengu.in
+    affiliation: Subantarctic islands
+  - first: Aptenodytes
+    last: Forsteri
+    email: emperor@pengu.in
+    affiliation: Antarctic sea ice
+  - first: Pygoscelis
+    last: Adeliae
+    email: adelie@pengu.in
+    affiliation: Antarctica and surrounding islands
+  - first: Pygoscelis
+    last: Antarcticus
+    email: chinstrap@pengu.in
+    affiliation: Antarctic Peninsula and Balleny Islands
+  - first: Pygoscelis
+    last: Papua
+    email: gentoo@pengu.in
+    affiliation: Subantarctic islands and locally in Antarctica
+  - first: Eudyptula
+    last: Minor
+    email: little@pengu.in
+    affiliation: Australia and New Zealand
+  - first: Spheniscus
+    last: Mendiculus
+    email: galapagos@pengu.in
+    affiliation: Galápagos Islands
+  - first: Spheniscus
+    last: Humboldti
+    email: humboldt@pengu.in
+    affiliation: South America
+  - first: Spheniscus
+    last: Magellanicus
+    email: magellanic@pengu.in
+    affiliation: South America
+  - first: Spheniscus
+    last: Demersus
+    email: african@pengu.in
+    affiliation: Coasts of Southern Africa
+  - first: Megadyptes
+    last: Antipodes
+    email: yellow-eyed@pengu.in
+    affiliation: New Zealand
+  - first: Eudyptes
+    last: Chrysolophus
+    email: macaroni@pengu.in
+    affiliation: Antarctic Peninsula, South America, and subantarctic islands in South Atlantic and Indian Oceans
+  - first: Eudyptes
+    last: Schlegeli
+    email: royal@pengu.in
+    affiliation: Macquarie Island and nearby islands
+  - first: Eudyptes
+    last: Moseleyi
+    email: northern-rockhopperi@pengu.in
+    affiliation: Tristan da Cunha, Amsterdam Island, and St. Paul Island
+  - first: Eudyptes
+    last: Chrysocome
+    email: southern-rockhopper@pengu.in
+    affiliation: South America and subantarctic islands in the Indian Ocean and New Zealand
+  - first: Eudyptes
+    last: Pachyrhynchus
+    email: fiordland@pengu.in
+    affiliation: New Zealand
+  - first: Eudyptes
+    last: Robustus
+    email: snares@pengu.in
+    affiliation: Snares Islands
+  - first: Eudyptes
+    last: Sclateri
+    email: erect-crested@pengu.in
+    affiliation: Bounty and Antipodes Islands
