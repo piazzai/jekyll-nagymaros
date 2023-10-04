@@ -3,9 +3,9 @@
 
         <nav class="navbar navbar-expand-sm">
             <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-
-{% include toggler.html %}
-
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navigation">
                 <div class="navbar-nav">
                     {%- for link in site.links %}
