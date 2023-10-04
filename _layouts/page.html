@@ -5,7 +5,8 @@ layout: default
 {% include header.html %}
 
 <main class="my-4">
-    <div class="container bg-gray-2 rounded">
+    {%- include variables/page-is-index.liquid %}
+    <div class="container {%- if page-is-index %} px-5 py-3 bg-gray-2 rounded{% endif %}">
         
         {% include variables/title.liquid -%}
         <h1 class="display-3 font-slab">{{ title }}</h1>

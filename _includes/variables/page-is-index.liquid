@@ -1,0 +1,7 @@
+{%- assign url = page.url | relative_url -%}
+{%- assign baseurl = site.baseurl | append: '/' -%}
+{%- if url == baseurl -%}
+{%- assign page-is-index = true -%}
+{%- else -%}
+{%- assign page-is-index = false -%}
+{%- endif -%}
