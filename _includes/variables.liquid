@@ -1,0 +1,20 @@
+{%- if page.title -%}
+{%- assign title = page.title -%}
+{%- else -%}
+{%- assign title = site.title -%}
+{%- endif -%}
+
+{%- if page.description -%}
+{%- assign description = page.description -%}
+{%- else -%}
+{%- assign description = site.description-%}
+{%- endif -%}
+
+{%- assign pageurl = page.url | relative_url | replace: '.html', '/' -%}
+{%- assign baseurl = site.baseurl | append: '/' -%}
+
+{%- if pageurl == baseurl -%}
+{%- assign index = true -%}
+{%- else -%}
+{%- assign index = false -%}
+{%- endif -%}
