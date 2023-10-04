@@ -3,6 +3,23 @@ body {
   font-family: "Inter", var(--bs-font-sans-serif);
 }
 
+.btn-outline-primary {
+  border-color: var(--oc-blue-7);
+  color: var(--oc-blue-7);
+
+  &:hover,
+  &:active {
+    background-color: var(--oc-blue-7);
+    border-color: inherit;
+    color: var(--oc-gray-0);
+  }
+
+  &.disabled {
+    border-color: var(--oc-blue-7);
+    color: var(--oc-blue-7);
+  }
+}
+
 @for $level from 1 through 6 {
   .display-#{$level} {
     font-family: "Zilla Slab", var(--bs-font-sans-serif);
