@@ -1,9 +1,16 @@
-var map = L.map('map').setView([51.505, -0.09], 13);
+---
+---
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+var map = L.map("map").setView([{{ site.data.location.center | default: '47.79064, 18.95647' }}], {{ site.data.location.zoom | default: 13 }});
 
-L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('A pretty CSS popup.<br> Easily customizable.')
-    .openPopup();
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+{%- if site.data.location.markers %}
+{%- assign reverse = site.data.location.markers | reverse %}
+{% for item in reverse %}
+L.marker([{{ item.coordinates }}])
+  .addTo(map)
+  .bindPopup("{{ item.label }}")
+  .openPopup();
+{% endfor %}
+{% endif %}
