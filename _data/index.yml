@@ -1,0 +1,8 @@
+buttons:
+  - text: Submit abstract
+    url: /
+  - text: Book hotel
+    url: /
+  - text: Pay registration
+    url: /
+    disabled: true
