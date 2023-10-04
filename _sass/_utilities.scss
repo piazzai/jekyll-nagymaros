@@ -1,4 +1,4 @@
-$oc-colors: (
+$colors: (
   "gray",
   "red",
   "pink",
@@ -14,7 +14,7 @@ $oc-colors: (
   "orange"
 );
 
-@each $color in $oc-colors {
+@each $color in $colors {
   @for $scale from 1 through 9 {
     .bg-#{$color}-#{$scale} {
       --bs-bg-opacity: 1;
