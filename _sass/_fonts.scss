@@ -1,17 +1,33 @@
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  font-style: normal;
-  font-weight: 300;
-  src: url("../webfonts/Inter-Light.woff2") format("woff2");
-}
+$weights: (
+  "Light": 300,
+  "Medium": 500,
+  "Bold": 700,
+);
 
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  font-style: italic;
-  font-weight: 300;
-  src: url("../webfonts/Inter-LightItalic.woff2") format("woff2");
+$styles: (
+  normal: "",
+  italic: "Italic",
+);
+
+@each $style, $style-value in $styles {
+  @font-face {
+    font-family: "Zilla Slab";
+    font-display: swap;
+    font-style: #{$style};
+    font-weight: 300;
+    src: url("../webfonts/ZillaSlab-Light#{$style-value}.woff2") format("woff2");
+  }
+
+  @each $weight, $weight-value in $weights {
+    @font-face {
+      font-family: "Inter";
+      font-display: swap;
+      font-style: #{$style};
+      font-weight: #{$weight-value};
+      src: url("../webfonts/Inter-#{$weight}#{$style-value}.woff2")
+        format("woff2");
+    }
+  }
 }
 
 @font-face {
@@ -28,52 +44,4 @@
   font-style: italic;
   font-weight: 400;
   src: url("../webfonts/Inter-Italic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  font-style: normal;
-  font-weight: 500;
-  src: url("../webfonts/Inter-Medium.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  font-style: italic;
-  font-weight: 500;
-  src: url("../webfonts/Inter-MediumItalic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700;
-  src: url("../webfonts/Inter-Bold.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-display: swap;
-  font-style: italic;
-  font-weight: 700;
-  src: url("../webfonts/Inter-BoldItalic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Zilla Slab";
-  font-display: swap;
-  font-style: normal;
-  font-weight: 300;
-  src: url("../webfonts/ZillaSlab-Light.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Zilla Slab";
-  font-display: swap;
-  font-style: italic;
-  font-weight: 300;
-  src: url("../webfonts/ZillaSlab-LightItalic.woff2") format("woff2");
 }
