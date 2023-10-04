@@ -1,0 +1,35 @@
+$oc-colors: (
+  "gray",
+  "red",
+  "pink",
+  "grape",
+  "violet",
+  "indigo",
+  "blue",
+  "cyan",
+  "teal",
+  "green",
+  "lime",
+  "yellow",
+  "orange"
+);
+
+@each $color in $oc-colors {
+  @for $scale from 1 through 9 {
+    .bg-#{$color}-#{$scale} {
+      --bs-bg-opacity: 1;
+      background-color: rgba(
+        var(--oc-#{$color}-#{$scale}-rgb),
+        var(--bs-bg-opacity)
+      ) !important;
+    }
+
+    .border-#{$color}-#{$scale} {
+      --bs-bg-opacity: 1;
+      border-color: rgba(
+        var(--oc-#{$color}-#{$scale}-rgb),
+        var(--bs-bg-opacity)
+      ) !important;
+    }
+  }
+}
