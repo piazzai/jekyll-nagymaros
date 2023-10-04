@@ -1,8 +1,9 @@
 title: Nagymaros
 description: Jekyll theme for a conference website
-author: Place Holder
 baseurl: ""
 url: "https://github.piazzai.io/jekyll-nagymaros"
+
+copyright: Place Holder
 
 exclude:
   - jekyll-nagymaros.gemspec
