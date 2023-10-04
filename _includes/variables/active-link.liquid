@@ -1,0 +1,6 @@
+{%- assign url = page.url | replace: '.html', '' -%}
+{%- if link.url == url -%}
+{%- assign active-link = ' active' -%}
+{%- else -%}
+{%- assign active-link = '' -%}
+{%- endif -%}
