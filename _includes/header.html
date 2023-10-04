@@ -1,9 +1,20 @@
-<header>
+<header class="bg-gray-4">
     <div class="container">
 
-        <nav>
-            <a href="{{ site.url }}">{{ site.title }}</a>
+        <nav class="navbar navbar-expand-sm">
+            <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
+
+{% include buttons/toggler.html %}
+
+            <div class="collapse navbar-collapse" id="navigation">
+                <div class="navbar-nav">
+                    {% for link in site.data.header.links %}
+                    {% include variables/active-link.liquid %}
+                    <a class="nav-link {{- active-link -}}" aria-current="page" href="{{ link.url }}">{{ link.text }}</a>
+                    {% endfor %}
+                </div>
+            </div>
         </nav>
-        
+
     </div>
 </header>
