@@ -19,9 +19,9 @@ layout: default
         </div>
         {%- if index %}
         <div class="btn-group-lg mb-4" role="group">
-            {% for button in site.data.index.buttons %}
+            {%- for button in site.data.index.buttons %}
             <a type="button" class="btn btn-outline-primary d-block d-lg-inline-block my-lg-0 {%- unless forloop.first or forloop.last %} my-2 mx-lg-2 {%- endunless %} {%- if button.disabled %} disabled {%- endif %}" href="{{ button.url }}">{{ button.text | upcase }}</a>
-            {% endfor %}
+            {%- endfor %}
         </div>
         {%- elsif program %}
         <div>
