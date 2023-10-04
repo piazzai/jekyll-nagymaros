@@ -1,5 +1,5 @@
 {%- if page.description -%}
-{{ page.description }}
+{%- assign description = page.description -%}
 {%- else -%}
-{{ site.description }}
+{%- assign description = site.description -%}
 {%- endif -%}
