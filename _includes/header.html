@@ -9,13 +9,13 @@
             <div class="collapse navbar-collapse" id="navigation">
                 <div class="navbar-nav">
                     {%- for link in site.links %}
-                    {%- assign url = page.url | replace: '.html', '/' %}
-                    {%- if link.url == url %}
-                    {% assign class = 'nav-link active' %}
+                    {%- assign linkurl = link.url | relative_url %}
+                    {%- if linkurl == pageurl %}
+                    {% assign link-current = true %}
                     {% else %}
-                    {% assign class = 'nav-link' %}
+                    {% assign link-current = false %}
                     {% endif %}
-                    <a class="{{ class }}" aria-current="page" href="{{ link.url | relative_url }}">{{ link.text }}</a>
+                    <a class="nav-link {%- if link-current %} active {%- endif %}" aria-current="page" href="{{ link.url | relative_url }}">{{ link.text }}</a>
                     {%- endfor %}
                 </div>
             </div>
