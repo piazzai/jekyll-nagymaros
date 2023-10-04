@@ -10,11 +10,28 @@
 {%- assign description = site.description-%}
 {%- endif -%}
 
-{%- assign pageurl = page.url | relative_url | replace: '.html', '/' -%}
-{%- assign baseurl = site.baseurl | append: '/' -%}
+{%- assign this-page = page.name | remove: '.md' %}
 
-{%- if pageurl == baseurl -%}
+{%- if this-page == 'index' -%}
 {%- assign index = true -%}
 {%- else -%}
 {%- assign index = false -%}
+{%- endif -%}
+
+{%- if this-page == 'program' -%}
+{%- assign program = true -%}
+{%- else -%}
+{%- assign program = false -%}
+{%- endif -%}
+
+{%- if this-page == 'location' -%}
+{%- assign location = true -%}
+{%- else -%}
+{%- assign location = false -%}
+{%- endif -%}
+
+{%- if this-page == 'contributors' -%}
+{%- assign contributors = true -%}
+{%- else -%}
+{%- assign contributors = false -%}
 {%- endif -%}
