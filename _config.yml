@@ -3,6 +3,14 @@ description: Jekyll theme for a conference website
 baseurl: /dev
 url: "https://github.piazzai.io/jekyll-nagymaros"
 
+links:
+  - text: Program
+    url: /program/
+  - text: Location
+    url: /location/
+  - text: Contributors
+    url: /contributors/
+
 copyright: Place Holder
 
 exclude:
