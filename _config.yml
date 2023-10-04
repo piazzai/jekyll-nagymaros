@@ -12,3 +12,6 @@ exclude:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+
+sass:
+  sourcemap: never
