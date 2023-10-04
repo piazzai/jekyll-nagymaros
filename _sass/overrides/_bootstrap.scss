@@ -1,0 +1,22 @@
+body {
+  font-family: "Inter", var(--bs-font-sans-serif);
+  color: var(--oc-gray-9);
+}
+
+.navbar-brand {
+  color: var(--oc-gray-8);
+
+  &:hover,
+  &:focus {
+    color: var(--oc-gray-9);
+  }
+}
+
+.nav-link {
+  color: var(--oc-gray-7);
+
+  &:hover,
+  &:focus {
+    color: var(--oc-gray-9);
+  }
+}
