@@ -8,10 +8,10 @@
 
             <div class="collapse navbar-collapse" id="navigation">
                 <div class="navbar-nav">
-                    {% for link in site.data.header.links %}
-                    {% include variables/active-link.liquid %}
+                    {%- for link in site.data.header.links %}
+                    {%- include variables/active-link.liquid %}
                     <a class="nav-link {{- active-link -}}" aria-current="page" href="{{ link.url }}">{{ link.text }}</a>
-                    {% endfor %}
+                    {%- endfor %}
                 </div>
             </div>
         </nav>
