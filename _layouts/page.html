@@ -17,6 +17,24 @@ layout: default
 
 {{ content }}
         </div>
+        {%- if index %}
+        <div>
+            
+        </div>
+        {%- elsif program %}
+        <div>
+            
+        </div>
+        {%- elsif location %}
+        <div>
+            
+        </div>
+        {%- elsif contributors %}
+        <div>
+
+        </div>
+        {%- endif %}
+    </div>
 </main>
 
 {% include footer.html %}
