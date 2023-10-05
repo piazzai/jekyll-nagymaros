@@ -28,8 +28,9 @@ layout: default
             
         </div>
         {%- elsif location %}
-        <div class="vh-60" id="map"></div>
+        <div id="map"></div>
         {%- elsif contributors %}
+        <div id="alphabet">
             {%- assign letter = empty %}
             {%- assign names = site.data.contributors.names | sort_natural: 'last' %}
             {%- for name in names -%}
