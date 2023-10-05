@@ -29,13 +29,13 @@ layout: default
                     <div class="col-lg-2">
                         <div class="d-block d-lg-none text-center mb-3">
                             <div class="btn btn-group p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
-
+                                {% assign days = site.data.program.days %}
 {% include loop-days.liquid %}
                             </div>
                         </div>
                         <div class="d-none d-lg-block">
                             <div class="btn btn-group-vertical p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
-
+                                {% assign days = site.data.program.days %}
 {% include loop-days.liquid %}
                             </div>
                         </div>

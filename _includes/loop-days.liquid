@@ -1,4 +1,3 @@
-{%- assign days = site.data.program.days -%}
 {%- for day in days -%}
 {%- assign slug = day.name | slugify -%}
 <button type="button" class="btn btn-outline-primary {%- if forloop.first %} active {%- endif %}" data-bs-toggle="tab" data-bs-target="#{{ slug }}" role="tab" aria-controls="{{ slug }}" aria-selected="true">
