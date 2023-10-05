@@ -18,7 +18,7 @@ layout: default
         <div class="mt-4">
             {% if index %}
             <div class="btn-group-lg mb-4" role="group">   
-            {% include loop-buttons.liquid %}
+                {% include loop-buttons.liquid %}
             </div>
             {% elsif program %}
             <div>
@@ -60,12 +60,11 @@ layout: default
             <div id="map"></div>
             {% elsif contributors %}
             <div id="alphabet">
-                {%- assign letter = empty %}
-                {%- assign names = site.data.contributors.names | sort_natural: 'last' %}
+                {% assign letter = empty %}
+                {% assign names = site.data.contributors.names | sort_natural: 'last' %}
                 {% include loop-names.liquid %}
-
             </div>
-            {%- endif %}
+            {% endif %}
         </div>
     </div>
 </main>
