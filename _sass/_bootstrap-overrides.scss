@@ -13,39 +13,35 @@ body {
   font-family: "Inter", var(--bs-font-sans-serif);
 }
 
-.btn-outline-primary {
-  border-color: var(--oc-blue-7) !important;
-  color: var(--oc-blue-7);
+.btn-primary {
+  background-color: var(--oc-blue-5) !important;
+  border-color: transparent !important;
+  color: var(--oc-gray-0);
 
   &:hover,
   &:active,
   &.active {
     background-color: var(--oc-blue-7) !important;
-    border-color: inherit;
-    color: var(--oc-gray-0);
   }
 
   &.disabled {
-    border-color: var(--oc-blue-7);
-    color: var(--oc-blue-7);
+    background-color: var(--oc-blue-3) !important;
   }
 }
 
-.btn-outline-secondary {
-  border-color: var(--oc-gray-4) !important;
-  color: var(--oc-gray-6);
+.btn-secondary {
+  background-color: var(--oc-gray-5) !important;
+  border-color: transparent !important;
+  color: var(--oc-gray-0);
 
   &:hover,
   &:active,
   &.active {
-    background-color: var(--oc-gray-4) !important;
-    border-color: inherit;
-    color: var(--oc-gray-7);
+    background-color: var(--oc-gray-6) !important;
   }
 
   &.disabled {
-    border-color: var(--oc-gray-4);
-    color: var(--oc-gray-6);
+    background-color: var(--oc-gray-3) !important;
   }
 }
 
