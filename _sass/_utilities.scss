@@ -31,13 +31,5 @@ $colors: (
         var(--bs-bg-opacity)
       ) !important;
     }
-
-    .color-#{$color}-#{$scale} {
-      --bs-bg-opacity: 1;
-      color: rgba(
-        var(--oc-#{$color}-#{$scale}-rgb),
-        var(--bs-bg-opacity)
-      ) !important;
-    }
   }
 }
