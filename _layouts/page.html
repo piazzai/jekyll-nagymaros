@@ -9,12 +9,11 @@ layout: default
     <div class="container {%- if index %} px-5 py-3 bg-gray-2 rounded {%- endif %}">
         <div>
             <h1 class="font-slab color-gray-8 {%- if index %} display-3 {%- else %} display-5 {%- endif %}">{{ title }}</h1>
-            {%- if index %}
+            {% if index %}
             <p class="lead">{{ description }}</p>
             <hr class="my-4">
-            {%- endif %}
-
-{{ content }}
+            {% endif %}
+            {{ content }}
         </div>
         <div class="mt-4">
             {%- if index %}
@@ -23,32 +22,31 @@ layout: default
                 <a type="button" class="btn btn-outline-primary d-block d-lg-inline-block my-lg-0 {%- unless forloop.first or forloop.last %} my-2 mx-lg-2 {%- endunless %} {%- if button.disabled %} disabled {%- endif %}" href="{{ button.url }}">{{ button.text | upcase }}</a>
                 {%- endfor %}
             </div>
-            {%- elsif program %}
+            {% elsif program %}
             <div>
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="d-block d-lg-none text-center mb-3">
                             <div class="btn btn-group p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
                                 {% assign days = site.data.program.days %}
-{% include loop-days.liquid %}
+                                {% include loop-days.liquid %}
                             </div>
                         </div>
                         <div class="d-none d-lg-block">
                             <div class="btn btn-group-vertical p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
                                 {% assign days = site.data.program.days %}
-{% include loop-days.liquid %}
+                                {% include loop-days.liquid %}
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-10">
-                        {%- for day in days %}
-                        {%- assign slug = day.name | slugify %}
+                        {% for day in days %}
+                        {% assign slug = day.name | slugify %}
                         <div class="tab-content aos-init aos-animate" data-aos="fade-up">
-                            <div class="tab-pane fade {%- if forloop.first %} active show {%- endif %}" id="{{ slug }}" role="tabpanel" aria-labelledby="{{ slug }}-tab">
+                            <div class="tab-pane fade {% if forloop.first %} active show {% endif %}" id="{{ slug }}" role="tabpanel" aria-labelledby="{{ slug }}-tab">
                                 <ul class="list-unstyled">
-                                    {%- assign categories = site.data.program.categories %}
-                                    
-{% include loop-events.liquid %}
+                                    {% assign categories = site.data.program.categories %}
+                                    {% include loop-events.liquid %}
                                 </ul>
                             </div>
                         </div>
@@ -66,9 +64,9 @@ layout: default
                     </div>
                 </div>
             </div>
-            {%- elsif location %}
+            {% elsif location %}
             <div id="map"></div>
-            {%- elsif contributors %}
+            {% elsif contributors %}
             <div id="alphabet">
                 {%- assign letter = empty %}
                 {%- assign names = site.data.contributors.names | sort_natural: 'last' %}
