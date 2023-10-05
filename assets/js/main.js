@@ -8,9 +8,9 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 {%- if site.data.location.markers %}
 {%- assign reverse = site.data.location.markers | reverse %}
 {% for item in reverse %}
-L.marker([{{ item.coordinates }}])
+L.marker([{{ item.coord }}])
   .addTo(map)
-  .bindPopup("{{ item.label }}")
+  .bindPopup("{{ item.text }}")
   .openPopup();
 {% endfor %}
 {% endif %}

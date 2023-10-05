@@ -1,5 +1,5 @@
 {%- for name in names -%}
-{%- assign fullname = name.first | append: ' ' | append: name.last -%}
+{%- assign full = name.first | append: ' ' | append: name.last -%}
 {%- assign initial = name.last | slice: 0 | upcase -%}
 {%- if letter != initial -%}
 {%- unless forloop.first -%}
@@ -11,7 +11,7 @@
     <h5 class="fw-light">{{ letter }}</h5>
     <ul class="list-unstyled">
 {%- endif %}
-        <li>{%- if name.email -%}<a href="{{ name.email | prepend: 'mailto:' }}">{{ fullname }}</a>{%- else -%}{{ fullname }}{%- endif -%}</li>
+        <li>{%- if name.email -%}<a href="{{ name.email | prepend: 'mailto:' }}">{{ full }}</a>{%- else -%}{{ full }}{%- endif -%}</li>
 {%- endfor %}
     </ul>
 </div>

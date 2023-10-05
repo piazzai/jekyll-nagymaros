@@ -1,7 +1,7 @@
 center: 47.79064, 18.95647
 zoom: 13
 markers:
-  - label: A pretty CSS popup. <br> Easily customizable.
-    coordinates: 47.78917, 18.9614
-  - label: Another CSS popup.
-    coordinates: 47.78682, 18.96726
+  - text: A pretty CSS popup. <br> Easily customizable.
+    coord: 47.78917, 18.9614
+  - text: Another CSS popup.
+    coord: 47.78682, 18.96726
