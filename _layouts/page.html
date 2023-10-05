@@ -25,7 +25,59 @@ layout: default
         </div>
         {%- elsif program %}
         <div>
-            
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="d-block d-lg-none text-center mb-3">
+                        <div class="btn btn-group p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
+
+{% include loop-days.liquid %}
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <div class="btn btn-group-vertical p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
+                                
+{% include loop-days.liquid %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="tab-content aos-init aos-animate" data-aos="fade-up">
+                        {% for day in days %}
+                        {% assign slug = day.name | slugify %}
+                        <div class="tab-pane fade {%- if forloop.first %} active show {%- endif %}" id="{{ slug }}" role="tabpanel" aria-labelledby="{{ slug }}-tab">
+                            <ul class="list-unstyled">
+                                {% assign categories = site.data.program.categories %}
+                                {% for event in day.events %}
+                                {% if event.category %}
+                                {% assign category = categories | find: 'name', event.category %}
+                                {% assign color = category.color | prepend: 'border-' %}
+                                {% else %}
+                                {% assign color = '' %}
+                                {% endif %}
+                                <li class="d-flex flex-column flex-md-row mb-4">
+                                    <span class="nagy-time d-block flex-shrink-0 me-4 mb-3 mb-md-0 fw-light small">{{ event.time }}</span>
+                                    <div class="ps-4 border-start border-3 {{ color }}">
+                                        <h5 class="nagy-h5 fw-light">{{ event.title }}</h5>
+                                        <p class="fw-light mb-0">{{ event.subtitle }}</p>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            <!-- <div class="row text-center">
+                                <div class="btn-group-lg" role="group">
+                                    {% assign dailies = day.events | map: 'category' | uniq %}
+                                    {% for category in dailies %}
+                                    {% assign name = category | upcase %}
+                                    {% assign color = categories | where: 'name', category | map: 'color' | first | prepend: 'bg-' %}
+                                    <span class="h5"><span class="badge {{ color }}">{{ name }}</span></span>
+                                    {% endfor %}
+                                </div>
+                            </div> -->
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
         {%- elsif location %}
         <div id="map"></div>
