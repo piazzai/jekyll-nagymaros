@@ -24,8 +24,7 @@ $styles: (
       font-display: swap;
       font-style: #{$style};
       font-weight: #{$weight-value};
-      src: url("../webfonts/Inter-#{$weight}#{$style-value}.woff2")
-        format("woff2");
+      src: url("../webfonts/Inter-#{$weight}#{$style-value}.woff2") format("woff2");
     }
   }
 }
