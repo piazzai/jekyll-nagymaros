@@ -31,6 +31,24 @@ body {
   }
 }
 
+.btn-outline-secondary {
+  border-color: var(--oc-gray-4) !important;
+  color: var(--oc-gray-6);
+
+  &:hover,
+  &:active,
+  &.active {
+    background-color: var(--oc-gray-4) !important;
+    border-color: inherit;
+    color: var(--oc-gray-7);
+  }
+
+  &.disabled {
+    border-color: var(--oc-gray-4);
+    color: var(--oc-gray-6);
+  }
+}
+
 @for $level from 1 through 6 {
   .display-#{$level} {
     font-family: "Zilla Slab", var(--bs-font-sans-serif);
