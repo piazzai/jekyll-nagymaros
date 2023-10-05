@@ -1,4 +1,4 @@
-buttons:
+actions:
   - text: Submit abstract
     url: /
   - text: Book hotel

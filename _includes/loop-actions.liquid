@@ -1,0 +1,3 @@
+{% for action in site.data.index.actions %}
+<a type="button" class="btn btn-outline-primary d-block d-lg-inline-block my-lg-0 {% unless forloop.first or forloop.last %} my-2 mx-lg-2 {% endunless %} {% if action.disabled %} disabled {% endif %}" href="{{ action.url }}">{{ action.text | upcase }}</a>
+{% endfor %}
