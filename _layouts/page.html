@@ -30,33 +30,28 @@ layout: default
         {%- elsif location %}
         <div class="vh-60" id="map"></div>
         {%- elsif contributors %}
-        <div class="contrib-list">
-            {% assign letter = empty %}
-            {% assign names = site.data.contributors.names | sort_natural: 'last' %}
-            {% for name in names %}
-            {% assign initial = name.last | slice: 0 | upcase %}
-            {% if letter != initial %}
-            {% unless forloop.first %}
+            {%- assign letter = empty %}
+            {%- assign names = site.data.contributors.names | sort_natural: 'last' %}
+            {%- for name in names -%}
+            {%- assign fullname = name.first | append: ' ' | append: name.last -%}
+            {%- assign initial = name.last | slice: 0 | upcase -%}
+            {%- if letter != initial -%}
+            {%- unless forloop.first -%}
                 </ul>
             </div>
-            {% endunless %}
-            {% assign letter = initial %}
-            <div class="contrib-group">
+            {%- endunless -%}
+            {%- assign letter = initial %}
+            <div>
                 <h5 class="fw-light">{{ letter }}</h5>
                 <ul class="list-unstyled">
-                    {% endif %}
-                    <li>
-                        <ul class="list-unstyled">
-                            <li>{{ name.last | append: ', ' | append: name.first }}</li>
-                            <li class="ps-3">{{ name.affiliation }}</li>
-                            <li class="ps-3"><a href="{{ name.email | prepend: 'mailto:' }}">{{ name.email }}</a></li>
-                        </ul>
-                    </li>
-                    {% endfor %}
+            {%- endif %}
+                    <li>{%- if name.email -%}<a href="{{ name.email | prepend: 'mailto:' }}">{{ fullname }}</a>{%- else -%}{{ fullname }}{%- endif -%}</li>
+            {%- endfor %}
                 </ul>
             </div>
+
         </div>
-        {%- endif %}
+        {% endif %}
     </div>
 </main>
 
