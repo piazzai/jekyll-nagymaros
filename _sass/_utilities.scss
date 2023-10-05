@@ -15,7 +15,7 @@ $colors: (
 );
 
 @each $color in $colors {
-  @for $scale from 1 through 9 {
+  @for $scale from 0 through 9 {
     .bg-#{$color}-#{$scale} {
       --bs-bg-opacity: 1;
       background-color: rgba(
