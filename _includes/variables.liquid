@@ -1,37 +1,37 @@
-{%- if page.title -%}
-{%- assign title = page.title -%}
-{%- else -%}
-{%- assign title = site.title -%}
-{%- endif -%}
+{% if page.title %}
+{% assign title = page.title %}
+{% else %}
+{% assign title = site.title %}
+{% endif %}
 
-{%- if page.description -%}
-{%- assign description = page.description -%}
-{%- else -%}
-{%- assign description = site.description-%}
-{%- endif -%}
+{% if page.description %}
+{% assign description = page.description %}
+{% else %}
+{% assign description = site.description %}
+{% endif %}
 
-{%- assign this-page = page.name | remove: '.md' %}
+{% assign this-page = page.name | remove: '.md' %}
 
-{%- if this-page == 'index' -%}
-{%- assign index = true -%}
-{%- else -%}
-{%- assign index = false -%}
-{%- endif -%}
+{% if this-page == 'index' %}
+{% assign index = true %}
+{% else %}
+{% assign index = false %}
+{% endif %}
 
-{%- if this-page == 'program' -%}
-{%- assign program = true -%}
-{%- else -%}
-{%- assign program = false -%}
-{%- endif -%}
+{% if this-page == 'program' %}
+{% assign program = true %}
+{% else %}
+{% assign program = false %}
+{% endif %}
 
-{%- if this-page == 'location' -%}
-{%- assign location = true -%}
-{%- else -%}
-{%- assign location = false -%}
-{%- endif -%}
+{% if this-page == 'location' %}
+{% assign location = true %}
+{% else %}
+{% assign location = false %}
+{% endif %}
 
-{%- if this-page == 'contributors' -%}
-{%- assign contributors = true -%}
-{%- else -%}
-{%- assign contributors = false -%}
-{%- endif -%}
+{% if this-page == 'contributors' %}
+{% assign contributors = true %}
+{% else %}
+{% assign contributors = false %}
+{% endif %}

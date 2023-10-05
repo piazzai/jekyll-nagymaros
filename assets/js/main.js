@@ -5,8 +5,8 @@ var map = L.map("map").setView([{{ site.data.location.center | default: '47.7906
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-{%- if site.data.location.markers %}
-{%- assign reverse = site.data.location.markers | reverse %}
+{% if site.data.location.markers %}
+{% assign reverse = site.data.location.markers | reverse %}
 {% for item in reverse %}
 L.marker([{{ item.coord }}])
   .addTo(map)
