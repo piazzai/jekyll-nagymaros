@@ -6,7 +6,7 @@
 {% assign color = 'gray-3' %}
 {% endif %}
 <li class="d-flex flex-column flex-md-row mb-4">
-    <span class="nagy-time d-block flex-shrink-0 me-4 mb-3 mb-md-0 fw-light small">{{ event.time }}</span>
+    <span class="nagy-time d-block flex-shrink-0 me-4 mb-3 mb-md-0 fw-light small">{{ event.start }} to {{ event.end }}</span>
     <div class="ps-4 border-start border-3 border-{{ color }}">
         <h5 class="nagy-h5 fw-light">{{ event.title }}</h5>
         <p class="fw-light mb-0">{{ event.subtitle }}</p>
