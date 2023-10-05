@@ -41,9 +41,3 @@ $colors: (
     }
   }
 }
-
-@for $height from 1 through 9 {
-  .vh-#{$height}0 {
-    height: #{$height}0vh !important;
-  }
-}
