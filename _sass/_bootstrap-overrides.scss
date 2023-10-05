@@ -14,12 +14,13 @@ body {
 }
 
 .btn-outline-primary {
-  border-color: var(--oc-blue-7);
+  border-color: var(--oc-blue-7) !important;
   color: var(--oc-blue-7);
 
   &:hover,
-  &:active {
-    background-color: var(--oc-blue-7);
+  &:active,
+  &.active {
+    background-color: var(--oc-blue-7) !important;
     border-color: inherit;
     color: var(--oc-gray-0);
   }
@@ -39,8 +40,7 @@ body {
 .navbar-brand {
   color: var(--oc-gray-8);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--oc-gray-9);
   }
 }
@@ -48,8 +48,7 @@ body {
 .nav-link {
   color: var(--oc-gray-7);
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--oc-gray-9);
   }
 }
