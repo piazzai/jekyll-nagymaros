@@ -1,10 +1,10 @@
 categories:
   - name: A category
-    color: blue-5
+    color: orange-6
   - name: Another category
-    color: cyan-5
+    color: teal-6
   - name: Yet another category
-    color: grape-5
+    color: cyan-6
 days:
   - name: Day 1
     events:
