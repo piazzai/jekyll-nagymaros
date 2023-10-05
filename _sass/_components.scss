@@ -1,9 +1,4 @@
-.contrib-group {
-  page-break-inside: avoid;
-  break-inside: avoid-column;
-}
-
-.contrib-list {
+#alphabet {
   @media screen and (min-width: 576px) {
     column-count: 1;
   }
@@ -15,4 +10,13 @@
   @media screen and (min-width: 992px) {
     column-count: 3;
   }
+
+  div {
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+  }
+}
+
+#map {
+  height: 50vh;
 }
