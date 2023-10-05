@@ -1,17 +1,14 @@
 <head>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-{% if site.indexing %}
-{% seo title %}
-{% else %}
-<meta name="robots" content="noindex, nofollow" />
-<title>{{ site.title | prepend: ' | ' | prepend: page.title }}</title>
-{% endif %}
+    {% if site.indexing %}
+    {% seo title %}
+    {% else %}
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{{ site.title | prepend: ' | ' | prepend: page.title }}</title>
+    {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/leaflet.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/open-color.css' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}" />
-
 </head>

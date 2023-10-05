@@ -1,6 +1,5 @@
 <header class="bg-gray-4">
     <div class="container">
-
         <nav class="navbar navbar-expand-sm">
             <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,11 +7,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navigation">
                 <div class="navbar-nav">
-{% include loop-links.liquid %}
-
+                    {% include loop-links.liquid %}
                 </div>
             </div>
         </nav>
-
     </div>
 </header>
