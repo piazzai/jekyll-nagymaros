@@ -41,27 +41,14 @@ layout: default
                         </div>
                     </div>
                     <div class="col-lg-10">
-                        {% for day in days %}
-                        {% assign slug = day.name | slugify %}
+                        {%- for day in days %}
+                        {%- assign slug = day.name | slugify %}
                         <div class="tab-content aos-init aos-animate" data-aos="fade-up">
                             <div class="tab-pane fade {%- if forloop.first %} active show {%- endif %}" id="{{ slug }}" role="tabpanel" aria-labelledby="{{ slug }}-tab">
                                 <ul class="list-unstyled">
-                                    {% assign categories = site.data.program.categories %}
-                                    {% for event in day.events %}
-                                    {% if event.category %}
-                                    {% assign category = categories | find: 'name', event.category %}
-                                    {% assign color = category.color | prepend: 'border-' %}
-                                    {% else %}
-                                    {% assign color = '' %}
-                                    {% endif %}
-                                    <li class="d-flex flex-column flex-md-row mb-4">
-                                        <span class="nagy-time d-block flex-shrink-0 me-4 mb-3 mb-md-0 fw-light small">{{ event.time }}</span>
-                                        <div class="ps-4 border-start border-3 {{ color }}">
-                                            <h5 class="nagy-h5 fw-light">{{ event.title }}</h5>
-                                            <p class="fw-light mb-0">{{ event.subtitle }}</p>
-                                        </div>
-                                    </li>
-                                    {% endfor %}
+                                    {%- assign categories = site.data.program.categories %}
+                                    
+{% include loop-events.liquid %}
                                 </ul>
                             </div>
                         </div>

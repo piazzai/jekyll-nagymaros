@@ -1,0 +1,15 @@
+{%- for event in day.events -%}
+{%- if event.category -%}
+{%- assign category = categories | find: 'name', event.category -%}
+{%- assign color = category.color | prepend: 'border-' -%}
+{%- else -%}
+{%- assign color = '' %}
+{%- endif -%}
+<li class="d-flex flex-column flex-md-row mb-4">
+    <span class="nagy-time d-block flex-shrink-0 me-4 mb-3 mb-md-0 fw-light small">{{ event.time }}</span>
+    <div class="ps-4 border-start border-3 {{ color }}">
+        <h5 class="nagy-h5 fw-light">{{ event.title }}</h5>
+        <p class="fw-light mb-0">{{ event.subtitle }}</p>
+    </div>
+</li>
+{% endfor -%}
