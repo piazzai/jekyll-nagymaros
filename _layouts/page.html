@@ -8,7 +8,7 @@ layout: default
 <main class="my-4">
     <div class="container {% if index %} px-5 py-3 bg-gray-2 rounded {% endif %}">
         <div>
-            <h1 class="font-slab {% if index %} display-3 {% else %} display-5 {% endif %}">{{ title }}</h1>
+            <h1 class="{% if index %} display-3 {% else %} display-5 {% endif %}">{{ title }}</h1>
             {% if index %}
             <p class="lead">{{ description }}</p>
             <hr class="my-4">
@@ -59,7 +59,7 @@ layout: default
             {% elsif location %}
             <div id="map"></div>
             {% elsif contributors %}
-            <div id="alphabet">
+            <div id="abc">
                 {% assign letter = empty %}
                 {% assign names = site.data.contributors.names | sort_natural: 'last' %}
                 {% include loop-names.liquid %}
