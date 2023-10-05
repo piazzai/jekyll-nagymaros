@@ -46,18 +46,12 @@ layout: default
                                     {% assign categories = site.data.program.categories %}
                                     {% include loop-events.liquid %}
                                 </ul>
+                                <div class="text-center" role="group">
+                                    {% assign dailies = day.events | map: 'category' | uniq %}
+                                    {% include loop-dailies.liquid %}
+                                </div>
                             </div>
                         </div>
-                        <!-- <div class="row text-center">
-                            <div class="btn-group-lg" role="group">
-                                {% assign dailies = day.events | map: 'category' | uniq %}
-                                {% for category in dailies %}
-                                {% assign name = category | upcase %}
-                                {% assign color = categories | where: 'name', category | map: 'color' | first | prepend: 'bg-' %}
-                                <span class="h5"><span class="badge {{ color }}">{{ name }}</span></span>
-                                {% endfor %}
-                            </div>
-                        </div> -->
                         {% endfor %}
                     </div>
                 </div>
