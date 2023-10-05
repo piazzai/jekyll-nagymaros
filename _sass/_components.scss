@@ -20,3 +20,30 @@
 #map {
   height: 50vh;
 }
+
+#n1,
+#n2,
+#n3 {
+  color: var(--oc-gray-0);
+  display: inline-block;
+  font-size: 6rem;
+  height: 6rem;
+  line-height: 6rem;
+  margin-top: 15%;
+  width: 6rem;
+
+  $sizes: (
+    576: 8,
+    768: 10,
+    992: 12,
+  );
+
+  @each $size, $size-value in $sizes {
+    @media (min-width: #{$size}px) {
+      font-size: #{$size-value}rem;
+      height: #{$size-value}rem;
+      line-height: #{$size-value}rem;
+      width: #{$size-value}rem;
+    }
+  }
+}
