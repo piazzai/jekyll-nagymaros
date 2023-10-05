@@ -7,7 +7,6 @@ layout: default
 
 <main class="my-4">
     <div class="container {%- if index %} px-5 py-3 bg-gray-2 rounded {%- endif %}">
-
         <div>
             <h1 class="font-slab color-gray-8 {%- if index %} display-3 {%- else %} display-5 {%- endif %}">{{ title }}</h1>
             {%- if index %}
@@ -17,78 +16,80 @@ layout: default
 
 {{ content }}
         </div>
-        {%- if index %}
-        <div class="btn-group-lg mb-4" role="group">
-            {%- for button in site.data.index.buttons %}
-            <a type="button" class="btn btn-outline-primary d-block d-lg-inline-block my-lg-0 {%- unless forloop.first or forloop.last %} my-2 mx-lg-2 {%- endunless %} {%- if button.disabled %} disabled {%- endif %}" href="{{ button.url }}">{{ button.text | upcase }}</a>
-            {%- endfor %}
-        </div>
-        {%- elsif program %}
-        <div>
-            <div class="row">
-                <div class="col-lg-2">
-                    <div class="d-block d-lg-none text-center mb-3">
-                        <div class="btn btn-group p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
+        <div class="mt-4">
+            {%- if index %}
+            <div class="btn-group-lg mb-4" role="group">
+                {%- for button in site.data.index.buttons %}
+                <a type="button" class="btn btn-outline-primary d-block d-lg-inline-block my-lg-0 {%- unless forloop.first or forloop.last %} my-2 mx-lg-2 {%- endunless %} {%- if button.disabled %} disabled {%- endif %}" href="{{ button.url }}">{{ button.text | upcase }}</a>
+                {%- endfor %}
+            </div>
+            {%- elsif program %}
+            <div>
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="d-block d-lg-none text-center mb-3">
+                            <div class="btn btn-group p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
 
 {% include loop-days.liquid %}
+                            </div>
                         </div>
-                    </div>
-                    <div class="d-none d-lg-block">
-                        <div class="btn btn-group-vertical p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
-                                
+                        <div class="d-none d-lg-block">
+                            <div class="btn btn-group-vertical p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
+
 {% include loop-days.liquid %}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-10">
-                    <div class="tab-content aos-init aos-animate" data-aos="fade-up">
+                    <div class="col-lg-10">
                         {% for day in days %}
                         {% assign slug = day.name | slugify %}
-                        <div class="tab-pane fade {%- if forloop.first %} active show {%- endif %}" id="{{ slug }}" role="tabpanel" aria-labelledby="{{ slug }}-tab">
-                            <ul class="list-unstyled">
-                                {% assign categories = site.data.program.categories %}
-                                {% for event in day.events %}
-                                {% if event.category %}
-                                {% assign category = categories | find: 'name', event.category %}
-                                {% assign color = category.color | prepend: 'border-' %}
-                                {% else %}
-                                {% assign color = '' %}
-                                {% endif %}
-                                <li class="d-flex flex-column flex-md-row mb-4">
-                                    <span class="nagy-time d-block flex-shrink-0 me-4 mb-3 mb-md-0 fw-light small">{{ event.time }}</span>
-                                    <div class="ps-4 border-start border-3 {{ color }}">
-                                        <h5 class="nagy-h5 fw-light">{{ event.title }}</h5>
-                                        <p class="fw-light mb-0">{{ event.subtitle }}</p>
-                                    </div>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                            <!-- <div class="row text-center">
-                                <div class="btn-group-lg" role="group">
-                                    {% assign dailies = day.events | map: 'category' | uniq %}
-                                    {% for category in dailies %}
-                                    {% assign name = category | upcase %}
-                                    {% assign color = categories | where: 'name', category | map: 'color' | first | prepend: 'bg-' %}
-                                    <span class="h5"><span class="badge {{ color }}">{{ name }}</span></span>
+                        <div class="tab-content aos-init aos-animate" data-aos="fade-up">
+                            <div class="tab-pane fade {%- if forloop.first %} active show {%- endif %}" id="{{ slug }}" role="tabpanel" aria-labelledby="{{ slug }}-tab">
+                                <ul class="list-unstyled">
+                                    {% assign categories = site.data.program.categories %}
+                                    {% for event in day.events %}
+                                    {% if event.category %}
+                                    {% assign category = categories | find: 'name', event.category %}
+                                    {% assign color = category.color | prepend: 'border-' %}
+                                    {% else %}
+                                    {% assign color = '' %}
+                                    {% endif %}
+                                    <li class="d-flex flex-column flex-md-row mb-4">
+                                        <span class="nagy-time d-block flex-shrink-0 me-4 mb-3 mb-md-0 fw-light small">{{ event.time }}</span>
+                                        <div class="ps-4 border-start border-3 {{ color }}">
+                                            <h5 class="nagy-h5 fw-light">{{ event.title }}</h5>
+                                            <p class="fw-light mb-0">{{ event.subtitle }}</p>
+                                        </div>
+                                    </li>
                                     {% endfor %}
-                                </div>
-                            </div> -->
+                                </ul>
+                            </div>
                         </div>
+                        <!-- <div class="row text-center">
+                            <div class="btn-group-lg" role="group">
+                                {% assign dailies = day.events | map: 'category' | uniq %}
+                                {% for category in dailies %}
+                                {% assign name = category | upcase %}
+                                {% assign color = categories | where: 'name', category | map: 'color' | first | prepend: 'bg-' %}
+                                <span class="h5"><span class="badge {{ color }}">{{ name }}</span></span>
+                                {% endfor %}
+                            </div>
+                        </div> -->
                         {% endfor %}
                     </div>
                 </div>
             </div>
-        </div>
-        {%- elsif location %}
-        <div id="map"></div>
-        {%- elsif contributors %}
-        <div id="alphabet">
-            {%- assign letter = empty %}
-            {%- assign names = site.data.contributors.names | sort_natural: 'last' %}
-{% include loop-names.liquid %}
+            {%- elsif location %}
+            <div id="map"></div>
+            {%- elsif contributors %}
+            <div id="alphabet">
+                {%- assign letter = empty %}
+                {%- assign names = site.data.contributors.names | sort_natural: 'last' %}
+                {% include loop-names.liquid %}
 
+            </div>
+            {%- endif %}
         </div>
-        {% endif %}
     </div>
 </main>
 
