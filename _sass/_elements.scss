@@ -1,29 +1,4 @@
-#names-list {
-  @media (min-width: 576px) {
-    column-count: 1;
-  }
-
-  @media (min-width: 768px) {
-    column-count: 2;
-  }
-
-  @media (min-width: 992px) {
-    column-count: 3;
-  }
-
-  div {
-    page-break-inside: avoid;
-    break-inside: avoid-column;
-  }
-}
-
-#map {
-  height: 60vh;
-}
-
-#digit-1,
-#digit-2,
-#digit-3 {
+#digit {
   display: inline-block;
   font-size: 6rem;
   height: 6rem;
@@ -47,6 +22,25 @@
   }
 }
 
-#reveal {
-  visibility: hidden;
+#map {
+  height: 60vh;
+}
+
+#names-list {
+  @media (min-width: 576px) {
+    column-count: 1;
+  }
+
+  @media (min-width: 768px) {
+    column-count: 2;
+  }
+
+  @media (min-width: 992px) {
+    column-count: 3;
+  }
+
+  div {
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+  }
 }
