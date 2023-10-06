@@ -1,7 +1,6 @@
 {% if site.copyright %}
-<footer>
-    <div class="container">
-        <small class="text-muted">Copyright &copy;{{ site.time | date: '%Y' }} {{ site.copyright }}. All rights reserved.</small>
-    </div>
+{% assign year = site.time | date: '%Y' %}
+<footer class="container">
+    <small class="text-muted">Copyright &copy;{{ year }} {{ site.copyright }}. All rights reserved.</small>
 </footer>
 {% endif %}
