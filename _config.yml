@@ -1,7 +1,8 @@
 title: Nagymaros
 description: Jekyll theme for a conference website
 baseurl: ""
-url: "https://github.piazzai.io/jekyll-nagymaros"
+url: "https://jekyll-nagymaros.netlify.app"
+repo: "https://github.com/piazzai/jekyll-nagymaros"
 
 permalink: pretty
 indexing: true
