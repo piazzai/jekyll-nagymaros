@@ -8,15 +8,17 @@
             </button>
             <div class="collapse navbar-collapse" id="navigation">
                 <div class="navbar-nav">
-                    {% for link in site.links %}
-                    {% assign this-link = link.url | remove: '/' %}
-                    {% if this-link == this-page %}
-                    {% assign current-link = true %}
+                    {% assign links = site.pages | sort: 'navorder' %}
+                    {% for link in links %}
+                    {% if link.navorder %}
+                    {% assign current = link.name | split: '.' | first %}
+                    {% assign href = link.url | relative_url %}
+                    {% if page.layout == current %}
+                    <a class="nav-link active" aria-current="page" href="{{ href }}">{{ link.title }}</a>
                     {% else %}
-                    {% assign current-link = false %}
+                    <a class="nav-link" href="{{ href }}">{{ link.title }}</a>
                     {% endif %}
-                    <a class="nav-link {% if current-link %} active {% endif %}" aria-current="page"
-                        href="{{ link.url | relative_url }}">{{ link.text }}</a>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
