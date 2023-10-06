@@ -1,8 +1,8 @@
 actions:
   - text: Submit abstract
-    url: /
+    url: a-link
   - text: Book hotel
-    url: /
+    url: another-link
   - text: Pay registration
-    url: /
+    url: yet-another-link
     disabled: true
