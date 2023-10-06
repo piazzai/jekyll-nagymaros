@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% if site.indexing %}
+    {% if site.indexing and page.layout != 404 %}
     {% seo %}
     {% else %}
     <meta name="robots" content="noindex, nofollow" />
