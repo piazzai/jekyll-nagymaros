@@ -1,0 +1,103 @@
+---
+layout: default
+---
+
+{% if page.title %}
+{% assign title = page.title %}
+{% else %}
+{% assign title = site.title %}
+{% endif %}
+
+{% if page.description %}
+{% assign description = page.description %}
+{% else %}
+{% assign description = site.description %}
+{% endif %}
+
+{% include header.html %}
+
+<main class="my-4">
+    <div class="container">
+        <h1 class="display-5">{{ title }}</h1>
+        {{ content }}
+        <div class="row mt-4">
+            <div class="col-lg-2">
+                {% assign directions = 'horizontal, vertical' | split: ', ' %}
+                {% for direction in directions %}
+                {% if direction == 'horizontal' %}
+                {% assign direction_classes = 'd-block d-lg-none text-center mb-3' %}
+                {% assign direction_group = 'btn-group' %}
+                {% else %}
+                {% assign direction_classes = 'd-none d-lg-block' %}
+                {% assign direction_group = 'btn-group-vertical' %}
+                {% endif %}
+                <div class="{{ direction_classes }}">
+                    <div class="btn {{ direction_group }} p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
+                        {% for day in site.data.program.days %}
+                        {% assign day_slug = day.name | slugify %}
+                        {% assign day_classes = 'btn btn-secondary' %}
+                        {% if forloop.first %}
+                        {% assign day_classes = day_classes | append: ' active' %}
+                        {% endif %}
+                        <button type="button" class="{{ day_classes }}" data-bs-toggle="tab"
+                            data-bs-target="#{{ day_slug }}" role="tab" aria-controls="{{ day_slug }}"
+                            aria-selected="true">
+                            <span class="fs-5">{{ day.name }}</span>
+                        </button>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-lg-10">
+                {% for day in site.data.program.days %}
+                {% assign day_slug = day.name | slugify %}
+                {% assign day_classes = 'tab-pane fade' %}
+                {% if forloop.first %}
+                {% assign day_classes = day_classes | append: ' active show' %}
+                {% endif %}
+                <div class="tab-content aos-init aos-animate" data-aos="fade-up">
+                    <div class="{{ day_classes }}" id="{{ day_slug }}" role="tabpanel"
+                        aria-labelledby="{{ day_slug }}-tab">
+                        {% assign categories = site.data.program.categories %}
+                        <ul class="list-unstyled">
+                            {% for event in day.events %}
+                            {% if event.category %}
+                            {% assign category = categories | find: 'name', event.category %}
+                            {% assign color = category.color %}
+                            {% else %}
+                            {% assign color = 'gray-4' %}
+                            {% endif %}
+                            <li class="d-flex flex-column flex-lg-row ms-2">
+                                <div class="row col-lg-2 me-lg-4 text-lg-end mb-2">
+                                    <small class="text-muted">{{ event.start }}–{{ event.end }}</small>
+                                </div>
+                                <div class="row col-lg-10 border-start border-3 border-{{ color }} mb-4">
+                                    {% if event.subtitle %}
+                                    <h5 class="fw-light m-0 mb-2">{{ event.title }}</h5>
+                                    <p class="fw-light m-0">{{ event.subtitle }}</p>
+                                    {% else %}
+                                    <h5 class="fw-light m-0">{{ event.title }}</h5>
+                                    {% endif %}
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <div class="text-center">
+                            {% assign badges = day.events | map: 'category' | uniq %}
+                            {% for badge in badges %}
+                            {% assign color = categories | where: 'name', badge | map: 'color' %}
+                            {% if color %}
+                            <span class="h5"><span class="badge bg-{{ color }}">{{ badge | upcase }}</span></span>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{% include footer.html %}

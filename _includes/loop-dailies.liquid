@@ -1,7 +1,0 @@
-{% for daily in dailies %}
-{% assign name = daily | upcase %}
-{% assign color = categories | where: 'name', daily | map: 'color' | first %}
-{% if color %}
-<span class="h5"><span class="badge bg-{{ color }}">{{ name }}</span></span>
-{% endif %}
-{% endfor %}

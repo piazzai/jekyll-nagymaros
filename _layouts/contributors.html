@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+{% if page.title %}
+{% assign title = page.title %}
+{% else %}
+{% assign title = site.title %}
+{% endif %}
+
+{% if page.description %}
+{% assign description = page.description %}
+{% else %}
+{% assign description = site.description %}
+{% endif %}
+
+{% include header.html %}
+
+<main class="my-4">
+    <div class="container">
+        <h1 class="display-5">{{ title }}</h1>
+        {{ content }}
+        <div class="mt-4" id="abc">
+            {% assign letter = empty %}
+            {% assign names = site.data.contributors.names | sort_natural: 'last' %}
+            {% for name in names %}
+            {% assign full = name.first | append: ' ' | append: name.last %}
+            {% assign initial = name.last | slice: 0 | upcase %}
+            {% if letter != initial %}
+            {% unless forloop.first %}
+                </ul>
+            </div>
+            {% endunless %}
+            {% assign letter = initial %}
+            <div>
+                <h5 class="fw-light">{{ letter }}</h5>
+                <ul class="list-unstyled">
+            {% endif %}
+            {% if name.email %}
+                    <li><a href="{{ name.email | prepend: 'mailto:' }}">{{ full }}</a></li>
+            {% else %}
+                    <li>{{ full }}</li>
+            {% endif %}
+            {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% include footer.html %}
