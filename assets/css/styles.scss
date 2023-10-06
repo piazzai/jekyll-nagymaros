@@ -5,6 +5,5 @@
 @import "utilities";
 @import "elements";
 
-/* overrides */
-@import "bootstrap";
-@import "leaflet";
+@import "overrides/bootstrap";
+@import "overrides/leaflet";
