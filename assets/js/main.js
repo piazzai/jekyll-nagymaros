@@ -31,6 +31,12 @@ l{{ n }} = setInterval(function () {
   }}, t)
 {% endfor %}
 
+function showIt() {
+    document.getElementById("reveal").style.visibility = "visible";
+}
+
+setTimeout("showIt()", 1500);
+
 var map = L.map("map").setView([{{ site.data.location.center | default: '47.79064, 18.95647' }}], {{ site.data.location.zoom | default: 13 }});
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
