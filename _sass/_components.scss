@@ -1,4 +1,4 @@
-#abc {
+#names-list {
   @media (min-width: 576px) {
     column-count: 1;
   }
@@ -21,9 +21,9 @@
   height: 50vh;
 }
 
-#n1,
-#n2,
-#n3 {
+#digit-1,
+#digit-2,
+#digit-3 {
   display: inline-block;
   font-size: 6rem;
   height: 6rem;

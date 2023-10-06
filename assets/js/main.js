@@ -19,7 +19,7 @@ var t = 25, i = 0;
 {% assign max = 100 %}
 {% assign out = 4 %}
 {% endif %}
-var l{{ n }}, s{{ n }} = document.querySelector("#n{{ n }}");
+var l{{ n }}, s{{ n }} = document.querySelector("#digit-{{ n }}");
 
 l{{ n }} = setInterval(function () {
   "use strict";

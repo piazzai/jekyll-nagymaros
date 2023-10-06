@@ -20,7 +20,7 @@ layout: default
     <div class="container">
         <h1 class="display-5">{{ title }}</h1>
         {{ content }}
-        <div class="mt-4" id="abc">
+        <div class="mt-4" id="names-list">
             {% assign letter = empty %}
             {% assign names = site.data.contributors.names | sort_natural: 'last' %}
             {% for name in names %}
