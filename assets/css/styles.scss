@@ -2,7 +2,9 @@
 ---
 
 @import "fonts";
-@import "components";
 @import "utilities";
-@import "override-bootstrap";
-@import "override-leaflet";
+@import "elements";
+
+/* overrides */
+@import "bootstrap";
+@import "leaflet";
