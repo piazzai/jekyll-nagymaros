@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: program
 title: Program
 description: Schedule of talks and activities
 ---

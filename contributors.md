@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: contributors
 title: Contributors
 description: Index of contributing authors
 ---

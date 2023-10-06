@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: location
 title: Location
 description: Map of conference locations
 ---
