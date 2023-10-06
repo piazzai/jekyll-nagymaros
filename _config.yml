@@ -1,6 +1,6 @@
 title: Nagymaros
 description: Jekyll theme for a conference website
-baseurl: /dev
+baseurl: ""
 url: "https://github.piazzai.io/jekyll-nagymaros"
 
 permalink: pretty
