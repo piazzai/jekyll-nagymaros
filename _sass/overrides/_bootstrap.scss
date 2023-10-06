@@ -65,4 +65,12 @@ body {
 
 .text-muted {
   color: var(--oc-gray-6) !important;
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: var(--oc-gray-9);
+    }
+  }
 }
