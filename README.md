@@ -51,11 +51,11 @@ The `layout` variable determines what your page looks like. The four basic pages
 
 In addition, your pages can contain a `navorder` variable in the front matter, which specifies in what position the page will be listed in the top navigation bar. Pages will only appear in this bar if a `navorder` value is provided.
 
-Data that appears throughout the site is set by YAML files located in the `_data` folder. In particular, `index.yml` includes the information needed to create buttons in the index page; `program.yml` includes the conference schedule and color codes for event categories; `location.yml` contains coordinates to center the map and place markets; and `contributors.yml` includes the list of contributors, with optional email addresses.
-
-Additional customization occurs in the `_config.yml` file located in the root directory. Aside from the usual configuration variables, this file allows setting a value for the Boolean variable `indexing`. If the value of this variable is set to `false`, web crawlers will be instructed not to index your site, which will make it much less likely to appear in search engine results.
+Core customization occurs in the `_config.yml` file located in the root directory. Aside from the usual configuration variables, this file allows setting a value for the Boolean variable `indexing`. If the value of this variable is set to `false`, web crawlers will be instructed not to index your site, which will make it much less likely to appear in search engine results.
 
 In the configuration file, users will also find a `copyright` variable. This determines the name of the copyright holder in the notice appearing in the theme's footer. The notice is suppressed if no value is provided for this variable.
+
+Data that appears throughout the site is set by YAML files located in the `_data` folder. In particular, `index.yml` includes the information needed to create buttons in the index page; `program.yml` includes the conference schedule and color codes for event categories; `location.yml` contains coordinates to center the map and place markets; and `contributors.yml` includes the list of contributors, with optional email addresses.
 
 The `_sass` folders includes files that set layout and color scheme. Finally, the `assets` folder includes the compiled CSS and Javascript, along with images necessary to display the map and fonts that consitute the site's typography.
 
