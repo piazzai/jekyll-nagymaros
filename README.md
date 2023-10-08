@@ -81,7 +81,7 @@ title: # your page's title
 description: # a short description of what your page contains
 ```
 
-The `layout` variable determines what your page will look like. The variables `title` and `description` are used in creating the page's metadata, so their values will appear in search results if your site is indexed by search engines. If you do not set values for these variables, they will default to the site title and description set in `_config.yml`.
+The `layout` variable determines what your page will look like. The variables `title` and `description` are used in creating the page's metadata, so their values will appear in search results if your site is indexed by search engines. If you do not set values for these variables, they will default to the site-wide title and description provided in `_config.yml`.
 
 In addition, a page's front matter can include a `navorder` variable, whose purpose is setting the position of the page in the navigation bar within the theme's header. For example, setting `navorder: 1` will result in the page being listed first in the navigation bar. A page will only appear in the navigation bar if the `navorder` variable is set, which allows you to hide some pages from navigation if you wish.
 
