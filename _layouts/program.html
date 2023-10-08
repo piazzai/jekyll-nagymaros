@@ -85,14 +85,16 @@ layout: default
                             </li>
                             {% endfor %}
                         </ul>
-                        <div class="text-center">
-                            {% assign badges = day.events | map: 'category' | compact | uniq | sort %}
-                            {% for badge in badges %}
-                            {% assign color = categories | where: 'name', badge | map: 'color' %}
-                            {% if color %}
-                            <span class="h5"><span class="badge mt-1 bg-{{ color }}">{{ badge | upcase }}</span></span>
-                            {% endif %}
-                            {% endfor %}
+                        <div class="row justify-content-center">
+                            <div class="col-8 text-center">
+                                {% assign badges = day.events | map: 'category' | compact | uniq | sort %}
+                                {% for badge in badges %}
+                                {% assign color = categories | where: 'name', badge | map: 'color' %}
+                                {% if color %}
+                                <span class="h5"><span class="badge mt-1 bg-{{ color }}">{{ badge | upcase }}</span></span>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
                 </div>
