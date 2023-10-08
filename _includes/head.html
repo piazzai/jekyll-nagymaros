@@ -5,7 +5,10 @@
     {% seo %}
     {% else %}
     <meta name="robots" content="noindex, nofollow" />
+    {% if page.title %}
     <title>{{ site.title | prepend: ' | ' | prepend: page.title }}</title>
+    {% else %}
+    <title>{{ site.title | append: ' | ' | append: site.description }}</title>
     {% endif %}
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
