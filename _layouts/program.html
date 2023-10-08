@@ -87,7 +87,7 @@ layout: default
                         </ul>
                         <div class="row justify-content-center">
                             <div class="col-8 text-center">
-                                {% assign badges = day.events | map: 'category' | compact | uniq | sort %}
+                                {% assign badges = day.events | map: 'category' | compact | uniq %}
                                 {% for badge in badges %}
                                 {% assign color = categories | where: 'name', badge | map: 'color' %}
                                 {% if color %}
