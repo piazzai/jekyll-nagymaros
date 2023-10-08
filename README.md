@@ -39,7 +39,15 @@ Or install it yourself as:
 
 In case the theme is installed as a gem, you will still be able to customize its core files by creating your own files with the same names and paths. For example, if you want to change the index's layout, you would create a `_layouts` folder in your own site and place a customized `index.html` file within that folder. During build, Jekyll will give priority to your own files over the theme's.
 
+At the very minimum, you should customize the website's data in the `_data` folder, following the instructions below.
+
 ## Usage
+
+The `_sass` folder includes files that define the theme's layout and color scheme. The `assets` folder includes the compiled CSS and JavaScript, along with images necessary to render the map and webfonts required by the theme's typography. There is no need to customize the contents of either of these folders, as your website will work properly with the defaults provided by the theme.
+
+You might want to customize the layouts in the `_layouts` folder, and you will definitely want to customize the website data in the `_data` folder. For these customizations, please follow the instructions below.
+
+### Layouts
 
 By default, the theme consists of four pages: `index.md`, `program.md`, `locations.md`, and `contributors.md`. New pages can be added easily. All pages should include the following front matter:
 
@@ -63,15 +71,15 @@ If the value of `indexing` is set to true, crawlers will be allowed to index you
 
 Finally, the `_config.yml` can include a `copyright` variable, which sets the name of the copyright holder in the notice appearing within the theme's footer. The copyright notice is suppressed if no value is provided for this variable, or if the value is an empty string.
 
-Data that appears in the theme's default pages is set by YAML files located in the `_data` folder. In particular, the file `index.yml` contains information needed to create buttons in the index page, including `text` and `url` for each button. If `disabled: true` is set for a button, the button will appear faded and unclickable.
+### Data
+
+Data that appears in the theme's default pages is set by YAML files located in the `_data` folder. In particular, the file `index.yml` contains information needed to create action buttons in the index page, including `text` and `url` for each button. If `disabled: true` is set for a button, the button will be faded and unclickable.
 
 The file `program.yml` contains the conference schedule and color codes for event categories. For each category, a `name` and a `color` must be provided, with colors following the naming conventions of the [Open Color](https://yeun.github.io/open-color) library. Then, for each event day, a `name` must be specified along with a list of events. Each event must have a `start` time, an `end` time, a `title`. Optionally, an event can also have a `subtitle` and a `category`, whose name must match one of the categories configured earlier.
 
 The file `location.yml` contains coordinates to center the map and place markers. The `center` variable must be a pair of coordinates in the form _latitude, longitude_. The `zoom` variable specifies how closely the map should be zoomed on the center location when it is first loaded. Both the map's center and the zoom can be changed by the user through the map's control panel after the map is loaded. Finally, the data can include a list of markers, each with an optional `text` that appears in the tooltip. For each market, a pair of coordinates in the form _latitude, longitude_ must be set in the `coord` variable.
 
 The file `contributors.yml` includes the list of contributors, each with `first` name and `last` name, as well as an optional `email` address that makes the name clickable.
-
-The `_sass` folders includes files that define the theme's layout and color scheme. Finally, the `assets` folder includes the compiled CSS and JavaScript, along with images necessary to render the map and webfonts required by the theme's typography.
 
 ## Credits
 
