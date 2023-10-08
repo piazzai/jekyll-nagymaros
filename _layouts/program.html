@@ -86,7 +86,7 @@ layout: default
                             {% endfor %}
                         </ul>
                         <div class="text-center">
-                            {% assign badges = day.events | map: 'category' | uniq %}
+                            {% assign badges = day.events | map: 'category' | compact | uniq | sort %}
                             {% for badge in badges %}
                             {% assign color = categories | where: 'name', badge | map: 'color' %}
                             {% if color %}
