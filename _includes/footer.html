@@ -1,11 +1,6 @@
 {% assign year = site.time | date: '%Y' %}
+{% if site.copyright and site.copyright != '' %}
 <footer class="container">
-    {% if site.copyright and site.copyright != '' %}
-    <div class="small text-muted">Copyright &copy;{{ year }} {{ site.copyright }}. All rights reserved.</div>
-    {% endif %}
-    <div class="small text-muted">
-        <a href="https://jekyllrb.com/">Engine</a> &middot;
-        <a href="https://rubygems.org/gems/jekyll-nagymaros">Theme</a> &middot;
-        <a href="{{ site.repo }}">Source</a>
-    </div>
+    <small class="text-muted">Copyright &copy;{{ year }} {{ site.copyright }}. All rights reserved.</small>
 </footer>
+{% endif %}
