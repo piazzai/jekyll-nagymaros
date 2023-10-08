@@ -90,7 +90,7 @@ layout: default
                             {% for badge in badges %}
                             {% assign color = categories | where: 'name', badge | map: 'color' %}
                             {% if color %}
-                            <span class="h5"><span class="badge bg-{{ color }}">{{ badge | upcase }}</span></span>
+                            <span class="h5"><span class="badge mt-1 bg-{{ color }}">{{ badge | upcase }}</span></span>
                             {% endif %}
                             {% endfor %}
                         </div>
