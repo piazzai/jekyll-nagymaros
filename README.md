@@ -7,7 +7,7 @@ Nagymaros is a [Jekyll](https://jekyllrb.com) theme designed for conferences, wo
 - A map of conference locations, customizable with markers and tooltips.
 - An alphabetical list of contributors, with optional email addresses.
 
-The theme is built with [Bootstrap 5](https://getbootstrap.com/), so it is mobile-first and fully responsive. The main typeface is [Inter](https://rsms.me/inter/), a clean sans-serif font that guarantees readability even at small screen sizes. Zilla Slab is used in display headings (or any text styled with one of Bootstrap's `display` classes). The layout is adapted from [jekyll-conference-theme](https://github.com/DigitaleGesellschaft/jekyll-theme-conference) and remains quite similar to it, but compared to this theme, Nagymaros aims to be simpler and easier to customize.
+The theme is built with [Bootstrap 5](https://getbootstrap.com/), so it is mobile-first and fully responsive. The main typeface is [Inter](https://rsms.me/inter/), a clean sans-serif font that guarantees readability even at small screen sizes. Zilla Slab is used in display headings (or any text styled with Bootstrap's display classes). The layout is adapted from [jekyll-conference-theme](https://github.com/DigitaleGesellschaft/jekyll-theme-conference) and remains similar to it, but compared to this theme, Nagymaros aims to be simpler and easier to customize.
 
 See the [demo](https://jekyll-nagymaros.netlify.app) to find out what the theme looks like.
 
@@ -59,11 +59,13 @@ Core customization occurs in the `_config.yml` file located in the root director
 <meta name="robots" content="noindex, nofollow" />
 ```
 
-If the value of `indexing` is set to true, crawlers will be allowed to index your site, and Jekyll will populate your pages' head with SEO tags.
+If the value of `indexing` is set to true, crawlers will be allowed to index your site, and Jekyll will populate your pages' head with SEO tags through the `jekyll-seo-tag` plugin.
 
 Finally, the `_config.yml` can include a `copyright` variable, which sets the name of the copyright holder in the notice appearing within the theme's footer. The copyright notice is suppressed if no value is provided for this variable, or if the value is an empty string.
 
-Data that appears throughout the site is set by YAML files located in the `_data` folder. The file `index.yml` contains information needed to create buttons in the index page, including `text` and `url` for each button.
+Data that appears in the theme's default pages is set by YAML files located in the `_data` folder.
+
+The file `index.yml` contains information needed to create buttons in the index page, including `text` and `url` for each button.
 
 The file `program.yml` contains the conference schedule and color codes for event categories. For each category, a `name` and a `color` must be provided, with colors following the naming conventions of the [Open Color](https://yeun.github.io/open-color) library. Then, for each event day, a `name` must be specified along with a list of events. Each event must have a `start` time, an `end` time, a `title`. Optionally, an event can also have a `subtitle` and a `category`, whose name must match one of the categories configured earlier.
 
@@ -71,7 +73,7 @@ The file `location.yml` contains coordinates to center the map and place markers
 
 The file `contributors.yml` includes the list of contributors, each with `first` name and `last` name, as well as an optional `email` address that makes the name clickable.
 
-The `_sass` folders includes files that set layout and color scheme. Finally, the `assets` folder includes the compiled CSS and Javascript, along with images necessary to display the map and fonts that consitute the site's typography.
+The `_sass` folders includes files that define the theme's layout and color scheme. Finally, the `assets` folder includes the compiled CSS and JavaScript, along with images necessary to render the map and webfonts required by the theme's typography.
 
 ## Credits
 
