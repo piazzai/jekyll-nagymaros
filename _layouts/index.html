@@ -31,7 +31,7 @@ layout: default
             {% if action.disabled %}
             {% assign action_classes = action_classes | append: ' disabled' %}
             {% endif %}
-            <a type="button" class="{{ action_classes }}" href="{{ action.url }}">{{ action.text | upcase }}</a>
+            <a type="button" class="{{ action_classes }}" href="{{ action.url }}" target="_blank">{{ action.text | upcase }}</a>
             {% endfor %}
         </div>
     </div>
