@@ -39,8 +39,6 @@ Or install it yourself as:
 
 In case the theme is installed as a gem, you will still be able to customize its core files by creating your own files with the same names and paths. For example, if you want to change the index's layout, you would create a `_layouts` folder in your own site and place a customized `index.html` file within that folder. During build, Jekyll will give priority to your own files over the theme's.
 
-At the very minimum, you should customize the website's data in the `_data` folder, following the instructions below.
-
 ## Usage
 
 The `_sass` folder includes files that define the theme's layout and color scheme. The `assets` folder includes the compiled CSS and JavaScript, along with images necessary to render the map and webfonts required by the theme's typography. There is no need to customize the contents of either of these folders, as your website will work properly with the defaults provided by the theme.
