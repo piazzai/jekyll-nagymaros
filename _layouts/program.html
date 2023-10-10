@@ -9,7 +9,8 @@ layout: default
     <div class="container">
         <h1 class="display-5">{{ title }}</h1>
         {{ content }}
-        <div class="row mt-4">
+        <hr class="my-4">
+        <div class="row">
             <div class="col-lg-2">
                 {% assign directions = 'horizontal, vertical' | split: ', ' %}
                 {% for direction in directions %}
