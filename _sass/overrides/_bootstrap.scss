@@ -11,6 +11,7 @@ body {
   background-color: var(--oc-gray-0);
   color: var(--oc-gray-8);
   font-family: "Inter", var(--bs-font-sans-serif);
+  font-size: 1.15rem;
 }
 
 .btn-primary {
@@ -45,6 +46,10 @@ body {
   .display-#{$level} {
     font-family: "Zilla Slab", var(--bs-font-sans-serif);
   }
+}
+
+.lead {
+  font-size: 1.5rem;
 }
 
 .navbar-brand {
