@@ -77,16 +77,20 @@ layout: default
                             </li>
                             {% endfor %}
                         </ul>
-                        <div class="row justify-content-center">
-                            <div class="col-8 text-center">
-                                {% assign badges = day.events | map: 'category' | compact | uniq %}
-                                {% for badge in badges %}
-                                {% assign color = categories | where: 'name', badge | map: 'color' %}
-                                {% if color %}
-                                <span class="h5"><span class="badge mt-1 bg-{{ color }}">{{ badge | upcase }}</span></span>
-                                {% endif %}
-                                {% endfor %}
-                            </div>
+                        <div class="text-center">
+                            {% assign legend = day.events | map: 'category' | compact | uniq %}
+                            {% assign size = legend | size %}
+                            {% if size > 0 %}
+                            <h5 class="fw-normal">{{ site.data.program.legend.title }}</h5>
+                            {% for item in legend %}
+                            {% assign border = categories | where: 'name', item | map: 'color' | first %}
+                            {% assign bg = border | split: '-' | first | prepend: 'bg-' | append: '-1' %}
+                            {% assign classes = border | prepend: ' border-' | prepend: bg %}
+                            {% if border %}
+                            <small class="d-block d-lg-inline-block mt-2 me-lg-2 px-3 py-1 border-start border-3 {{ classes }}">{{ item | upcase }}</small>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
                         </div>
                     </div>
                 </div>
