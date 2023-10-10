@@ -5,7 +5,7 @@ url: "https://jekyll-nagymaros.netlify.app"
 permalink: pretty
 
 indexing: true
-copyright: Place Holder
+copyright: false
 
 exclude:
   - jekyll-nagymaros.gemspec
