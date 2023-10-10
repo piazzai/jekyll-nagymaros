@@ -9,6 +9,7 @@ layout: default
     <div class="container">
         <h1 class="display-5">{{ title }}</h1>
         {{ content }}
+        {% if site.data.program %}
         <hr class="my-4">
         <div class="row">
             <div class="col-lg-2">
@@ -100,6 +101,7 @@ layout: default
                 {% endfor %}
             </div>
         </div>
+        {% endif %}
     </div>
 </main>
 

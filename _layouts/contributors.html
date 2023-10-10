@@ -9,6 +9,7 @@ layout: default
     <div class="container">
         <h1 class="display-5">{{ title }}</h1>
         {{ content }}
+        {% if site.data.contributors %}
         <hr class="my-4">
         {% assign groups = site.data.contributors.groups %}
         {% for group in groups %}
@@ -32,6 +33,7 @@ layout: default
             </ul>
         </div>
         {% endfor %}
+        {% endif %}
     </div>
 </main>
 
