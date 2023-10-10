@@ -8,7 +8,11 @@ indexing: false
 copyright: false
 
 exclude:
+  - demo
   - jekyll-nagymaros.gemspec
+  - LICENSE
+  - README.md
+  - screenshot.png
 
 plugins:
   - jekyll-seo-tag
