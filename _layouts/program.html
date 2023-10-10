@@ -82,7 +82,9 @@ layout: default
                             {% assign legend = day.events | map: 'category' | compact | uniq %}
                             {% assign size = legend | size %}
                             {% if size > 0 %}
+                            {% if site.data.program.legend.title %}
                             <h5 class="fw-normal">{{ site.data.program.legend.title }}</h5>
+                            {% endif %}
                             {% for item in legend %}
                             {% assign border = categories | where: 'name', item | map: 'color' | first %}
                             {% assign bg = border | split: '-' | first | prepend: 'bg-' | append: '-1' %}
