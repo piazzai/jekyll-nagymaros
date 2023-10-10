@@ -2,18 +2,7 @@
 layout: default
 ---
 
-{% if page.title %}
-{% assign title = page.title %}
-{% else %}
-{% assign title = site.title %}
-{% endif %}
-
-{% if page.description %}
-{% assign description = page.description %}
-{% else %}
-{% assign description = site.description %}
-{% endif %}
-
+{% include metadata.liquid %}
 {% include header.html %}
 
 <main class="my-4">
