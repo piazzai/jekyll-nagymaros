@@ -2,7 +2,6 @@ title: Nagymaros
 description: Jekyll theme for a conference website
 baseurl: ""
 url: "https://jekyll-nagymaros.netlify.app"
-permalink: pretty
 
 indexing: true
 copyright: Place Holder
