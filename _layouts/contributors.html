@@ -13,7 +13,9 @@ layout: default
         <hr class="my-4">
         {% assign groups = site.data.contributors.groups %}
         {% for group in groups %}
+        {% if group.title %}
         <h5 class="fw-normal">{{ group.title }}</h5>
+        {% endif %}
         {% if group.columns %}
         {% assign id = ' id="roster"' %}
         {% else %}
