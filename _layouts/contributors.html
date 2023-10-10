@@ -9,31 +9,29 @@ layout: default
     <div class="container">
         <h1 class="display-5">{{ title }}</h1>
         {{ content }}
-        <div class="mt-4" id="names-list">
-            {% assign letter = empty %}
-            {% assign names = site.data.contributors.names | sort_natural: 'last' %}
-            {% for name in names %}
-            {% assign full = name.first | append: ' ' | append: name.last %}
-            {% assign initial = name.last | slice: 0 | upcase %}
-            {% if letter != initial %}
-            {% unless forloop.first %}
-                </ul>
-            </div>
-            {% endunless %}
-            {% assign letter = initial %}
-            <div>
-                <h5 class="fw-light">{{ letter }}</h5>
-                <ul class="list-unstyled">
-            {% endif %}
-            {% if name.email %}
-                    <li><a href="{{ name.email | prepend: 'mailto:' }}">{{ full }}</a></li>
-            {% else %}
-                    <li>{{ full }}</li>
-            {% endif %}
-            {% endfor %}
-                </ul>
-            </div>
+        <hr class="my-4">
+        {% assign groups = site.data.contributors.groups %}
+        {% for group in groups %}
+        <h5 class="fw-normal">{{ group.title }}</h5>
+        {% if group.columns %}
+        {% assign id = ' id="roster"' %}
+        {% else %}
+        {% assign id = '' %}
+        {% endif %}
+        <div {{ id }}>
+            <ul class="list-unstyled">
+                {% assign members = group.members | sort_natural: 'surname' %}
+                {% for member in members %}
+                {% assign full = member.name | append: ' ' | append: member.surname %}
+                {% if member.email %}
+                <li class="fw-light"><a href="mailto:{{ member.email }}">{{ full }}</a></li>
+                {% else %}
+                <li class="fw-light">{{ full }}</li>
+                {% endif %}
+                {% endfor %}
+            </ul>
         </div>
+        {% endfor %}
     </div>
 </main>
 
