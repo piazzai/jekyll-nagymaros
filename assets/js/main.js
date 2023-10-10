@@ -30,3 +30,31 @@ L.marker([{{ marker.latlng }}])
     {% endif %}
 {% endfor %}
 {% endif %}
+
+{% if site.data.locations.areas %}
+{% for area in site.data.locations.areas %}
+{% assign latlngs = area.latlngs | join: '],[' | prepend: '[' | append: ']' %}
+{% assign color = area.color | default: '#ff6b6b' %}
+{% assign offset = area.offset | default: '0, 0' %}
+{% assign x = offset | split: ', ' | first %}
+{% assign y = offset | split: ', ' | last %}
+{% assign content = false %}
+{% if area.title %}
+{% assign content = area.title | prepend: '<strong>' | append: '</strong>' %}
+{% endif %}
+{% for line in area.text %}
+{% if content %}
+{% assign content = content | append: '<br>' | append: line %}
+{% else %}
+{% assign content = line %}
+{% endif %}
+{% endfor %}
+L.polygon([{{ latlngs }}], {color: '{{ color }}'})
+    {% if content %}
+    .addTo(map)
+    .bindTooltip("{{ content }}", {direction: 'center', offset: L.point({x: {{ x }}, y: {{ y }}})});
+    {% else %}
+    .addTo(map);
+    {% endif %}
+{% endfor %}
+{% endif %}
