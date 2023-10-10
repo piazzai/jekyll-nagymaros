@@ -1,7 +1,9 @@
 center: 47.788542883494856, 18.961139141737842
 zoom: 13
+
 markers:
-  - text: A pretty CSS popup. <br> Easily customizable.
-    coord: 47.78917, 18.9614
-  - text: Another CSS popup.
-    coord: 47.78682, 18.96726
+  - title: A pretty CSS tooltip
+    text: Easily customizable
+    latlng: 47.789169035641905, 18.961446798474288
+  - title: This is a tooltip with no text
+    latlng: 47.78691841448565, 18.967277537789023
