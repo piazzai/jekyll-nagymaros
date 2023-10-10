@@ -68,11 +68,11 @@ Core customization occurs in `_config.yml`. Aside from the usual configuration v
 <meta name="robots" content="noindex, nofollow" />
 ```
 
-If you declare `indexing: true`, instead, crawlers will be allowed to index your site and Jekyll will populate the head of every page with SEO tags.
+If you declare `indexing: true`, instead, crawlers will be allowed to index your site and Jekyll will populate the head of every page with SEO tags through the `jekyll-seo-tag` plugin.
 
 Data that appears in the theme's four default pages must be configured via YAML files located in the `_data` folder. See the corresponding files in `demo/_data` to understand how to write your own YAML, or better yet, clone these files and edit them.
 
-The order of appearance of pages in the theme's navigation bar is determined by the value of `navorder` set in each page's front matter. For example, setting `navorder: 1` will make the page appear first in the list. A page will only appear in the navigation bar if the `navorder` variable is set, so you are free to hide some pages from navigation by not giving it a value.
+The order of appearance of pages in the theme's navigation bar is determined by the value of `navorder` set in each page's front matter. For example, setting `navorder: 1` will make the page appear first in the list. Note that a page will only appear in the navigation bar if the `navorder` variable is set, so it is possible to hide some pages from navigation simply by not giving this variable a value.
 
 ## Credits
 
