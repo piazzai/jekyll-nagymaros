@@ -10,10 +10,3 @@ copyright: Place Holder
 exclude:
   - LICENSE
   - README.md
-
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-
-sass:
-  sourcemap: never
