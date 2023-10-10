@@ -56,6 +56,11 @@ layout: default
                             {% endif %}
                             {% assign start = event.time | split: ' to ' | slice: 0 %}
                             {% assign end = event.time | split: ' to ' | slice: 1 %}
+                            {% if forloop.last %}
+                            {% assign classes = color | append: ' mb-2' %}
+                            {% else %}
+                            {% assign classes = color | append: ' mb-4' %}
+                            {% endif %}
                             <li class="d-flex flex-column flex-lg-row ms-2">
                                 <div class="row col-lg-2 me-lg-4 text-lg-end mb-2">
                                     <small class="text-muted">{{ start }}–{{ end }}</small>
