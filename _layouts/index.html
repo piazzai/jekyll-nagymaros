@@ -11,6 +11,7 @@ layout: default
         <p class="lead">{{ description }}</p>
         <hr class="my-4">
         {{ content }}
+        {% if site.data.index.buttons %}
         <div class="btn-group-lg mt-4 mb-4" role="group">
             {% assign buttons = site.data.index.buttons %}
             {% for button in buttons %}
@@ -24,6 +25,7 @@ layout: default
             <a type="button" class="{{ classes }}" href="{{ button.url }}" target="_blank">{{ button.text | upcase }}</a>
             {% endfor %}
         </div>
+        {% endif %}
     </div>
 </main>
 
