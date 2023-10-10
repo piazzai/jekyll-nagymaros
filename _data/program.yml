@@ -1,10 +1,13 @@
-categories:
-  - name: A category
-    color: blue-4
-  - name: Another category
-    color: blue-9
-  - name: Yet another category
-    color: teal-7
+legend:
+  title: Legend
+  categories:
+    - name: A category
+      color: blue-6
+    - name: Another category
+      color: red-6
+    - name: Yet another category
+      color: teal-6
+
 days:
   - name: Day 1
     events:
