@@ -12,6 +12,8 @@ layout: default
         {% if site.data.program %}
         <hr class="my-4">
         <div class="row">
+            {% assign size = site.data.program.days.size %}
+            {% if size > 1 %}
             <div class="col-lg-2">
                 {% assign directions = 'horizontal, vertical' | split: ', ' %}
                 {% for direction in directions %}
@@ -38,7 +40,11 @@ layout: default
                 </div>
                 {% endfor %}
             </div>
-            <div class="col-lg-10">
+            {% assign width = 10 %}
+            {% else %}
+            {% assign width = 12 %}
+            {% endif %}
+            <div class="col-lg-{{ width }}">
                 {% for day in site.data.program.days %}
                 {% assign slug = day.name | slugify %}
                 {% assign classes = 'tab-pane fade' %}
