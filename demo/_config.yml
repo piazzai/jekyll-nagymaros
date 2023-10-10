@@ -8,7 +8,6 @@ indexing: true
 copyright: Place Holder
 
 exclude:
-  - jekyll-nagymaros.gemspec
   - LICENSE
   - README.md
 
