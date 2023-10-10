@@ -33,7 +33,7 @@ L.marker([{{ marker.latlng }}])
 
 {% if site.data.locations.areas %}
 {% for area in site.data.locations.areas %}
-{% assign latlngs = area.latlngs | join: '],[' | prepend: '[' | append: ']' %}
+{% assign latlng = area.latlng | join: '],[' | prepend: '[' | append: ']' %}
 {% assign color = area.color | default: '#ff6b6b' %}
 {% assign offset = area.offset | default: '0, 0' %}
 {% assign x = offset | split: ', ' | first %}
@@ -49,7 +49,7 @@ L.marker([{{ marker.latlng }}])
 {% assign content = line %}
 {% endif %}
 {% endfor %}
-L.polygon([{{ latlngs }}], {color: '{{ color }}'})
+L.polygon([{{ latlng }}], {color: '{{ color }}'})
     {% if content %}
     .addTo(map)
     .bindTooltip("{{ content }}", {direction: 'center', offset: L.point({x: {{ x }}, y: {{ y }}})});

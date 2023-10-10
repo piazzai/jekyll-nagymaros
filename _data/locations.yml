@@ -12,7 +12,7 @@ areas:
   - text:
       - This is a tooltip with no title...
       - ...and with multiple lines of text
-    latlngs:
+    latlng:
       - 47.81025552661079, 19.02201563177881
       - 47.80993848992647, 19.024740756084967
       - 47.812863800415236, 19.026607573523037
