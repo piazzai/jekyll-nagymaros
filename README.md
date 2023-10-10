@@ -27,11 +27,11 @@ If you choose to install the theme as a gem, you should create a Jekyll website 
 ├── _data
 │   ├── contributors.yml
 │   ├── index.yml
-│   ├── location.yml
+│   ├── locations.yml
 │   └── program.yml
 ├── Gemfile
 ├── index.md
-├── location.md
+├── locations.md
 └── program.md
 ```
 
@@ -91,7 +91,7 @@ Data that appears in the theme's default pages is set by YAML files located in t
 
 The file `program.yml` contains the conference schedule and color codes for event categories. For each category, a `name` and a `color` must be provided, with colors following the naming conventions of the [Open Color](https://yeun.github.io/open-color) library. Then, for each event day, a `name` must be specified along with a list of events. Each event must have a `time` and a `title`. Optionally, an event can also have a `subtitle` and a `category`, whose name must match one of the categories configured earlier.
 
-The file `location.yml` contains coordinates to center the map and place markers. The `center` variable must be a pair of coordinates in the form _latitude, longitude_. The `zoom` variable specifies how closely the map should be zoomed on the center location when it is first loaded. You can include a list of markers, each with an optional `text` that appears in the tooltip. For each marker, a pair of coordinates in the form _latitude, longitude_ must be set in the `coord` variable.
+The file `locations.yml` contains coordinates to center the map and place markers. The `center` variable must be a pair of coordinates in the form _latitude, longitude_. The `zoom` variable specifies how closely the map should be zoomed on the center location when it is first loaded. You can include a list of markers, each with an optional `text` that appears in the tooltip. For each marker, a pair of coordinates in the form _latitude, longitude_ must be set in the `coord` variable.
 
 The file `contributors.yml` includes the list of contributors, each with `first` name and `last` name, as well as an optional `email` that makes the name clickable.
 
