@@ -1,7 +1,10 @@
 ---
 ---
 
-var map = L.map("map").setView([{{ site.data.locations.center | default: '47.79064, 18.95647' }}], {{ site.data.locations.zoom | default: 13 }});
+{% assign center = site.data.locations.center | default: '47.788542883494856, 18.961139141737842' %}
+{% assign zoom = site.data.locations.zoom | default: 13 %}
+
+var map = L.map("map").setView([{{ center }}], {{ zoom }});
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
