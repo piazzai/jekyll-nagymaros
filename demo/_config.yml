@@ -1,0 +1,14 @@
+title: Your site's title
+description: A description for your new site
+baseurl: ""
+url: ""
+permalink: pretty
+
+theme: jekyll-nagymaros
+
+copyright: Place Holder
+indexing: true
+
+exclude:
+  - LICENSE
+  - README.md

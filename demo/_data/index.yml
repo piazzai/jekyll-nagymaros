@@ -1,0 +1,9 @@
+buttons:
+  - text: GitHub
+    url: https://github.com/piazzai/jekyll-nagymaros
+    disabled: false
+  - text: RubyGem
+    url: https://rubygems.org/gems/jekyll-nagymaros
+    disabled: false
+  - text: Disabled
+    disabled: true
