@@ -1,7 +1,8 @@
-title: Nagymaros
-description: Jekyll theme for a conference website
+title: Your awesome title
+description: An awesome description for your new site.
 baseurl: ""
-url: "https://jekyll-nagymaros.netlify.app"
+url: ""
+
 permalink: pretty
 
 indexing: true
