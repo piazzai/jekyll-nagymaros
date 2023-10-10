@@ -5,8 +5,8 @@ url: "https://jekyll-nagymaros.netlify.app"
 
 theme: jekyll-nagymaros
 
-indexing: true
 copyright: Place Holder
+indexing: true
 
 exclude:
   - LICENSE

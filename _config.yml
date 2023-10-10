@@ -2,10 +2,10 @@ title: Your awesome title
 description: An awesome description for your new site
 baseurl: ""
 url: ""
-
 permalink: pretty
-indexing: false
+
 copyright: false
+indexing: false
 
 exclude:
   - demo/
