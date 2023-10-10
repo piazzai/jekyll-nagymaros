@@ -1,13 +1,13 @@
 # jekyll-nagymaros
 
-Nagymaros is a [Jekyll](https://jekyllrb.com) theme designed for conferences, workshops, and similar events. It has a simple and intuitive structure featuring four pages that provide key information about the event:
+Nagymaros is a [Jekyll](https://jekyllrb.com) theme designed for conferences, workshops, meetings, and similar events. It has a simple and intuitive structure featuring four pages that provide key information about the event:
 
-- An index, meant for basic info, contacts, and links to external sources such as submission systems.
-- The conference program, adapted for multi-day schedules and color-coded for different event categories.
-- A map of conference locations, customizable with markers and tooltips.
-- An alphabetical list of contributors, with optional email addresses.
+- An index, meant for basic details and links to external sources, such as submission systems.
+- The conference program, adaptable to multi-day schedules and with color-coded event categories.
+- A map of conference locations, customizable with markers, areas, and tooltips.
+- An alphabetical list of contributors, with optional roles and email addresses.
 
-The theme is built with [Bootstrap 5](https://getbootstrap.com/), so it is mobile-first and fully responsive. The main typeface is [Inter](https://rsms.me/inter/), a clean sans-serif font that guarantees readability even at small screen sizes. Zilla Slab is used in display headings (or any text styled with Bootstrap's display classes). The layout is adapted from [jekyll-conference-theme](https://github.com/DigitaleGesellschaft/jekyll-theme-conference) and remains similar to it, but compared to this theme, Nagymaros aims to be simpler and easier to customize.
+The theme is built with [Bootstrap 5](https://getbootstrap.com/), for which reason it is mobile-first and fully responsive. The main typeface is [Inter](https://rsms.me/inter/), a clean sans-serif font that guarantees readability at small screen sizes. A slab-serif typeface, Zilla Slab, is used in display headings. The layout is adapted from [jekyll-conference-theme](https://github.com/DigitaleGesellschaft/jekyll-theme-conference) and remains quite similar to it, but compared to this theme, Nagymaros aims to be simpler and easier to customize.
 
 See the [demo](https://jekyll-nagymaros.netlify.app) to find out what the theme looks like.
 
@@ -15,13 +15,12 @@ See the [demo](https://jekyll-nagymaros.netlify.app) to find out what the theme 
 
 ## Installation
 
-The theme can be installed as usual by cloning or forking this repository and customizing the files. It can also be installed as a gem, in which case all theme files and directories will be conveniently hidden from view, but they will still be read and processed during Jekyll build.
+The theme can be installed as usual by cloning this repository and editing the files. However, it is far more convenient to install it as a gem, in which case all the files you do not want or need to customize remain hidden from view, but will nonetheless be read and processed during build.
 
 If you choose to install the theme as a gem, you should create a Jekyll website including the following files:
 
 ```bash
 .
-├── 404.md
 ├── _config.yml
 ├── contributors.md
 ├── _data
@@ -47,33 +46,29 @@ And add this line to `_config.yml`:
 theme: jekyll-nagymaros
 ```
 
-And then execute:
+The easiest way to set up a new theme is to copy the contents of the `demo` folder. This already includes a working set of files to get you started. After you are done creating the basic files, run bundler:
 
     $ bundle
 
-Or install it yourself as:
+Or install the gem yourself as:
 
     $ gem install jekyll-nagymaros
 
-In case the theme is installed as a gem, you will still be able to customize hidden files by creating your own with the same names and paths. For example, if you want to change the index's layout, you can create a `_layouts` folder and place in it a customized `index.html`. During build, Jekyll will give priority to your own files over the theme's.
+In case the theme is installed as a gem, you will still be able to customize hidden files by creating your own files with the same names and paths. For example, to change the index's layout you can create a `_layouts` folder and a file `index.html` within this folder. During build, Jekyll will give priority to your own files over the theme's.
 
 ## Usage
 
-Core customization occurs in `_config.yml`. Aside from the usual configuration variables (`title`, `description`, `baseurl`, `url`), you can set the value of `copyright`, which corresponds to the name of the copyright holder in the copyright notice within the theme's footer. If no value is provided for this variable, the whole copyright notice is suppressed. In addition, you can set the value of `indexing`, which determines whether you want to allow search engines to index your website. If you set it to false, web crawlers will be instructed not to index your site by placing the following code in every page's head:
+Core customization occurs in `_config.yml`. Aside from the usual configuration variables (`title`, `description`, `baseurl`, `url`), you can set the variable `copyright`, which corresponds to the name of the copyright holder in the notice within the theme's footer. If no value is provided, the notice is suppressed. In addition, you can set the variable `indexing`, which tells search engine crawlers whether to index your site. If you set it to `false`, the following code is placed in every page's head:
 
 ```html
 <meta name="robots" content="noindex, nofollow" />
 ```
 
-If the value is set to true, instead, crawlers will be allowed to index your site and Jekyll will populate your pages' head with SEO tags.
+If the value is set to `true`, instead, crawlers will be allowed to index your site and Jekyll will populate every page's head with SEO tags.
 
-The `_layouts` folder includes the layouts for the theme's four default pages, as well as a custom 404 page. A generic page layout is also available, which can be used as a basis to design new layouts and extend the theme. The `_sass` folder includes files that define the theme's appearance and color scheme. The `assets` folder includes the compiled CSS and JavaScript, along with images necessary to render the map and webfonts required by the theme's typography.
+The `_layouts` folder includes the layouts for the theme's four default pages, as well as a custom 404 page. A generic page layout is also available that can be used as a starting point to design new layouts and extend the theme. The `_sass` folder includes SCSS files that define the theme's appearance and color scheme. The `assets` folder includes compiled CSS and JavaScript, images, and webfonts. There is no *need* to customize files within these folders, as your website will work properly with the defaults provided. However, you might want to customize layouts, especially if you add new pages, and you will definitely need to customize site data.
 
-There is no need to customize the contents of any of these folders, as your website will work properly with the files provided by the theme. But you might want to customize files in `_layouts`, especially if you add new pages, and you will definitely need to customize files in `_data`.
-
-### Pages
-
-By default, the theme consists of four pages: `index.md`, `program.md`, `locations.md`, and `contributors.md`. You can optionally include an error page `404.md`. Other pages can be added easily. All pages should include the following front matter:
+All pages should include the following front matter:
 
 ```yaml
 layout: # one of the layouts stored in the layouts folder
@@ -81,19 +76,19 @@ title: # your page's title
 description: # a short description of what your page contains
 ```
 
-The `layout` variable determines what your page will look like. The variables `title` and `description` are used in creating the page's metadata, so their values will appear in search results if your site is indexed by search engines. If you do not set values for these variables, they will default to the site-wide title and description provided in `_config.yml`.
+The `layout` variable determines what your page looks like. The variables `title` and `description` are used by Jekyll to create metadata, so their values will appear in search engine results, if your site is indexed, and your visitors' browser tab. If you do not set values for these variables, they will default to the site title and description in `_config.yml`.
 
-In addition, a page's front matter can include a `navorder` variable, whose purpose is setting the position of the page in the navigation bar within the theme's header. For example, setting `navorder: 1` will result in the page being listed first in the navigation bar. A page will only appear in the navigation bar if the `navorder` variable is set, which allows you to hide some pages from navigation if you wish.
+The front matter can include an optional `navorder` variable, which determines your page's position in the navigation bar within the theme's header. For example:
 
-### Data
+```yaml
+navorder: 1
+```
 
-Data that appears in the theme's default pages is set by YAML files located in the `_data` folder. In particular, the file `index.yml` contains information needed to create action buttons in the index page, including `text` and `url` for each button. If `disabled: true` is set, the button will be faded and unclickable.
+This will result in the page being listed first. A page will only appear in the navigation bar if the `navorder` variable is truthy, so you are free to hide pages from navigation by not declaring the variable or setting it to `false`.
 
-The file `program.yml` contains the conference schedule and color codes for event categories. For each category, a `name` and a `color` must be provided, with colors following the naming conventions of the [Open Color](https://yeun.github.io/open-color) library. Then, for each event day, a `name` must be specified along with a list of events. Each event must have a `time` and a `title`. Optionally, an event can also have a `subtitle` and a `category`, whose name must match one of the categories configured earlier.
+Data that appears throughout the theme's default pages must be configured via YAML files located in the `_data` folder. In particular, `index.yml` should include information needed to create action buttons in the index page; `program.yml` should include the conference schedule and color codes for event categories; `locations.yml` should include coordinates to center the map and place markers, as well as optional tooltip texts; finally, `contributors.yml` should include the list of participants, with optional emails and roles.
 
-The file `locations.yml` contains coordinates to center the map and place markers. The `center` variable must be a pair of coordinates in the form _latitude, longitude_. The `zoom` variable specifies how closely the map should be zoomed on the center location when it is first loaded. You can include a list of markers, each with an optional `text` that appears in the tooltip. For each marker, a pair of coordinates in the form _latitude, longitude_ must be set in the `coord` variable.
-
-The file `contributors.yml` includes the list of contributors, each with `first` name and `last` name, as well as an optional `email` that makes the name clickable.
+Please refer to the YAML files provided in the `demo/_data` folder to understand how to write your own, or better yet, clone these files and edit them.
 
 ## Credits
 
