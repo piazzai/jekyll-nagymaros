@@ -1,8 +1,10 @@
-actions:
-  - text: Submit abstract
-    url: a-link
-  - text: Book hotel
-    url: another-link
+buttons:
   - text: Pay registration
-    url: yet-another-link
-    disabled: true
+    url: https://www.paypal.com/paypalme/nagymaros2023
+    disabled: false
+  - text: Submit abstract
+    url: https://www.dropbox.com/request/B6Sr56DTjIzALDQAiEkV
+    disabled: false
+  - text: Submit paper/slides
+    url: https://www.dropbox.com/request/BMWhUgJKQLDbbU0I68zC
+    disabled: false

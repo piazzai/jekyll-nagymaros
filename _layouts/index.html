@@ -12,15 +12,16 @@ layout: default
         <hr class="my-4">
         {{ content }}
         <div class="btn-group-lg mt-4 mb-4" role="group">
-            {% for action in site.data.index.actions %}
-            {% assign action_classes = 'btn btn-primary d-block d-lg-inline-block my-lg-0' %}
+            {% assign buttons = site.data.index.buttons %}
+            {% for button in buttons %}
+            {% assign classes = 'btn btn-primary d-block d-lg-inline-block my-lg-0' %}
             {% unless forloop.first or forloop.last %}
-            {% assign action_classes = action_classes | append: ' my-2 mx-lg-2' %}
+            {% assign classes = classes | append: ' my-2 mx-lg-2' %}
             {% endunless %}
-            {% if action.disabled %}
-            {% assign action_classes = action_classes | append: ' disabled' %}
+            {% if button.disabled %}
+            {% assign classes = classes | append: ' disabled' %}
             {% endif %}
-            <a type="button" class="{{ action_classes }}" href="{{ action.url }}" target="_blank">{{ action.text | upcase }}</a>
+            <a type="button" class="{{ classes }}" href="{{ button.url }}" target="_blank">{{ button.text | upcase }}</a>
             {% endfor %}
         </div>
     </div>
