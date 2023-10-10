@@ -4,8 +4,7 @@ baseurl: ""
 url: ""
 
 permalink: pretty
-
-indexing: true
+indexing: false
 copyright: false
 
 exclude:
