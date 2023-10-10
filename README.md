@@ -21,17 +21,19 @@ If you choose to install the theme as a gem, you should create a Jekyll website 
 
 ```bash
 .
+├── 404.md
 ├── _config.yml
+├── contributors.md
 ├── _data
 │   ├── contributors.yml
 │   ├── index.yml
 │   ├── locations.yml
 │   └── program.yml
-├── contributors.md
 ├── Gemfile
 ├── index.md
 ├── locations.md
 └── program.md
+
 ```
 
 To install the theme, you can then add this line to your `Gemfile`:
