@@ -10,9 +10,7 @@ layout: default
         <h1 class="display-5">{{ title }}</h1>
         {{ content }}
         <hr class="my-4">
-        <div class="row justify-content-center">
-            {% assign size = site.data.program.days | size %}
-            {% if size > 1 %}
+        <div class="row">
             <div class="col-lg-2">
                 {% assign directions = 'horizontal, vertical' | split: ', ' %}
                 {% for direction in directions %}
@@ -39,7 +37,6 @@ layout: default
                 </div>
                 {% endfor %}
             </div>
-            {% endif %}
             <div class="col-lg-10">
                 {% for day in site.data.program.days %}
                 {% assign slug = day.name | slugify %}
