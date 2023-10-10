@@ -1,51 +1,60 @@
-names:
-  - first: Aptenodytes
-    last: Patagonicus
-    email: king@pengu.in
-  - first: Aptenodytes
-    last: Forsteri
-    email: emperor@pengu.in
-  - first: Pygoscelis
-    last: Adeliae
-  - first: Pygoscelis
-    last: Antarcticus
-    email: chinstrap@pengu.in
-  - first: Pygoscelis
-    last: Papua
-    email: gentoo@pengu.in
-  - first: Eudyptula
-    last: Minor
-    email: little@pengu.in
-  - first: Spheniscus
-    last: Mendiculus
-  - first: Spheniscus
-    last: Humboldti
-    email: humboldt@pengu.in
-  - first: Spheniscus
-    last: Magellanicus
-    email: magellanic@pengu.in
-  - first: Spheniscus
-    last: Demersus
-    email: african@pengu.in
-  - first: Megadyptes
-    last: Antipodes
-    email: yellow-eyed@pengu.in
-  - first: Eudyptes
-    last: Chrysolophus
-  - first: Eudyptes
-    last: Schlegeli
-    email: royal@pengu.in
-  - first: Eudyptes
-    last: Moseleyi
-    email: northern-rockhopperi@pengu.in
-  - first: Eudyptes
-    last: Chrysocome
-    email: southern-rockhopper@pengu.in
-  - first: Eudyptes
-    last: Pachyrhynchus
-    email: fiordland@pengu.i
-  - first: Eudyptes
-    last: Robustus
-    email: snares@pengu.in
-  - first: Eudyptes
-    last: Sclateri
+groups:
+  - title: Scientific committee
+    columns: false
+    members:
+      - name: Aptenodytes
+        surname: Patagonicus
+        email: king@pengu.in
+      - name: Aptenodytes
+        surname: Forsteri
+        email: emperor@pengu.in
+  - title: Local organizer
+    columns: false
+    members:
+      - name: Pygoscelis
+        surname: Papua
+        email: gentoo@pengu.in
+  - title: Participants
+    columns: true
+    members:
+      - name: Pygoscelis
+        surname: Adeliae
+      - name: Pygoscelis
+        surname: Antarcticus
+        email: chinstrap@pengu.in
+      - name: Eudyptula
+        surname: Minor
+        email: little@pengu.in
+      - name: Spheniscus
+        surname: Mendiculus
+      - name: Spheniscus
+        surname: Humboldti
+        email: humboldt@pengu.in
+      - name: Spheniscus
+        surname: Magellanicus
+        email: magellanic@pengu.in
+      - name: Spheniscus
+        surname: Demersus
+        email: african@pengu.in
+      - name: Megadyptes
+        surname: Antipodes
+        email: yellow-eyed@pengu.in
+      - name: Eudyptes
+        surname: Chrysolophus
+      - name: Eudyptes
+        surname: Schlegeli
+        email: royal@pengu.in
+      - name: Eudyptes
+        surname: Moseleyi
+        email: northern-rockhopperi@pengu.in
+      - name: Eudyptes
+        surname: Chrysocome
+        email: southern-rockhopper@pengu.in
+      - name: Eudyptes
+        surname: Pachyrhynchus
+        email: fiordland@pengu.i
+      - name: Eudyptes
+        surname: Robustus
+        email: snares@pengu.in
+      - name: Eudyptes
+        surname: Sclateri
