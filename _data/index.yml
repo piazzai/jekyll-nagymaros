@@ -1,10 +1,9 @@
 buttons:
-  - text: Pay registration
-    url: https://www.paypal.com/paypalme/nagymaros2023
+  - text: Source code
+    url: https://github.com/piazzai/jekyll-nagymaros
     disabled: false
-  - text: Submit abstract
-    url: https://www.dropbox.com/request/B6Sr56DTjIzALDQAiEkV
+  - text: RubyGem
+    url: https://rubygems.org/gems/jekyll-nagymaros
     disabled: false
-  - text: Submit paper/slides
-    url: https://www.dropbox.com/request/BMWhUgJKQLDbbU0I68zC
-    disabled: false
+  - text: Disabled button
+    disabled: true
