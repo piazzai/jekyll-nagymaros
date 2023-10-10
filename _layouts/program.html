@@ -14,23 +14,21 @@ layout: default
                 {% assign directions = 'horizontal, vertical' | split: ', ' %}
                 {% for direction in directions %}
                 {% if direction == 'horizontal' %}
-                {% assign direction_classes = 'd-block d-lg-none text-center mb-3' %}
-                {% assign direction_group = 'btn-group' %}
+                {% assign classes = 'd-block d-lg-none text-center mb-3' %}
+                {% assign control = 'btn-group' %}
                 {% else %}
-                {% assign direction_classes = 'd-none d-lg-block' %}
-                {% assign direction_group = 'btn-group-vertical' %}
+                {% assign classes = 'd-none d-lg-block' %}
+                {% assign control = 'btn-group-vertical' %}
                 {% endif %}
-                <div class="{{ direction_classes }}">
-                    <div class="btn {{ direction_group }} p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
+                <div class="{{ classes }}">
+                    <div class="btn {{ control }} p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
                         {% for day in site.data.program.days %}
-                        {% assign day_slug = day.name | slugify %}
-                        {% assign day_classes = 'btn btn-secondary' %}
+                        {% assign slug = day.name | slugify %}
+                        {% assign classes = 'btn btn-secondary' %}
                         {% if forloop.first %}
-                        {% assign day_classes = day_classes | append: ' active' %}
+                        {% assign classes = classes | append: ' active' %}
                         {% endif %}
-                        <button type="button" class="{{ day_classes }}" data-bs-toggle="tab"
-                            data-bs-target="#{{ day_slug }}" role="tab" aria-controls="{{ day_slug }}"
-                            aria-selected="true">
+                        <button type="button" class="{{ classes }}" data-bs-toggle="tab" data-bs-target="#{{ slug }}" role="tab" aria-controls="{{ slug }}" aria-selected="true">
                             <span class="fs-5">{{ day.name }}</span>
                         </button>
                         {% endfor %}
@@ -40,16 +38,15 @@ layout: default
             </div>
             <div class="col-lg-10">
                 {% for day in site.data.program.days %}
-                {% assign day_slug = day.name | slugify %}
-                {% assign day_classes = 'tab-pane fade' %}
+                {% assign slug = day.name | slugify %}
+                {% assign classes = 'tab-pane fade' %}
                 {% if forloop.first %}
-                {% assign day_classes = day_classes | append: ' active show' %}
+                {% assign classes = classes | append: ' active show' %}
                 {% endif %}
                 <div class="tab-content aos-init aos-animate" data-aos="fade-up">
-                    <div class="{{ day_classes }}" id="{{ day_slug }}" role="tabpanel"
-                        aria-labelledby="{{ day_slug }}-tab">
-                        {% assign categories = site.data.program.categories %}
-                        <ul class="list-unstyled">
+                    <div class="{{ classes }}" id="{{ slug }}" role="tabpanel" aria-labelledby="{{ slug }}-tab">
+                        {% assign categories = site.data.program.legend.categories %}
+                        <ul class="list-unstyled lh-sm">
                             {% for event in day.events %}
                             {% if event.category %}
                             {% assign category = categories | find: 'name', event.category %}
@@ -63,8 +60,8 @@ layout: default
                                 <div class="row col-lg-2 me-lg-4 text-lg-end mb-2">
                                     <small class="text-muted">{{ start }}–{{ end }}</small>
                                 </div>
-                                <div class="row col-lg-10 border-start border-3 border-{{ color }} mb-4">
-                                    {% if event.subtitle %}
+                                <div class="row col-lg-10 border-start border-3 border-{{ classes }}">
+                                    {% if event.category %}
                                     <h5 class="fw-light m-0 mb-2">{{ event.title }}</h5>
                                     <p class="fw-light m-0">{{ event.subtitle }}</p>
                                     {% else %}
