@@ -1,7 +1,7 @@
 ---
 layout: index
-title: Your page's title
-description: A short description of what your page contains
+title: Nagymaros Theme
+description: A simple Jekyll theme for a conference or workshop website
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet luctus venenatis lectus magna fringilla urna. Ut etiam sit amet nisl purus in mollis.
