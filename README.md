@@ -15,7 +15,7 @@ See the [demo](https://jekyll-nagymaros.netlify.app) to find out what the theme 
 
 ## Installation
 
-The theme can be installed as usual by cloning this repository and editing the files. However, it is far more convenient to install it as a gem, in which case all the files you do not want or need to customize remain hidden from view, but will still be read and processed during Jekyll build.
+The theme can be installed as usual by cloning this repository and editing the files. However, it is far more convenient to install it as a gem, in which case all the files you do not want or need to customize remain hidden from view, but will still be read and processed during build.
 
 If you choose to install the theme as a gem, you should create a Jekyll website including these files:
 
@@ -73,6 +73,8 @@ If you declare `indexing: true`, instead, crawlers will be allowed to index your
 Data that appears in the theme's four default pages must be configured via YAML files located in the `_data` folder. See the corresponding files in `demo/_data` to understand how to write your own YAML, or better yet, clone these files and edit them.
 
 The order of appearance of pages in the theme's navigation bar is determined by the value of `navorder` set in each page's front matter. For example, setting `navorder: 1` will make the page appear first in the list. Note that a page will only appear in the navigation bar if the `navorder` variable is set, so it is possible to hide some pages from navigation simply by not giving this variable a value.
+
+Customizing the CSS is possible by creating a file `_sass/_custom.scss` that contains your own code. You can use this both to define new styles or to overwrite the theme's defaults. The file will be automatically compiled during build. 
 
 ## Credits
 
