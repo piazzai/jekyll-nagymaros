@@ -21,11 +21,11 @@ layout: default
             {% endunless %}
             {% if button.disabled %}
             {% assign classes = classes | append: ' disabled' %}
-            {% assign href = '' %}
+            {% assign a = '' %}
             {% else %}
-            {% assign href = 'href="' | append: button.url | append: '"' %}
+            {% assign a = 'href="' | append: button.url | append: '"' %}
             {% endif %}
-            <a type="button" class="{{ classes }}" {{ href }} target="_blank">{{ button.text | upcase }}</a>
+            <a {{ a }} type="button" class="{{ classes }}" target="_blank">{{ button.text | upcase }}</a>
             {% endfor %}
         </div>
         {% endif %}
