@@ -3,6 +3,7 @@ description: ""
 baseurl: ""
 url: ""
 
+home: false
 copyright: false
 indexing: false
 
