@@ -17,7 +17,7 @@ See the [demo](https://jekyll-nagymaros.netlify.app) to find out what the theme 
 
 The theme can be installed as usual by cloning this repository and editing the files. However, it is far more convenient to install it as a gem, in which case all the files you do not want or need to customize remain hidden from view, but will still be read and processed during build.
 
-If you choose to install the theme as a gem, you should create a Jekyll website including these files:
+If you choose to install the theme as a gem, your site should include at a minimum the following files:
 
 ```bash
 .
