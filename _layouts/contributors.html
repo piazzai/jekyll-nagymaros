@@ -17,11 +17,11 @@ layout: default
         <h5 class="fw-normal">{{ group.title }}</h5>
         {% endif %}
         {% if group.columns %}
-        {% assign id = ' id="roster"' %}
+        {% assign div = ' id="roster"' %}
         {% else %}
-        {% assign id = '' %}
+        {% assign div = '' %}
         {% endif %}
-        <div {{ id }}>
+        <div {{ div }}>
             <ul class="list-unstyled">
                 {% assign members = group.members | sort_natural: 'surname' %}
                 {% for member in members %}
