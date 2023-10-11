@@ -65,7 +65,7 @@ To customize hidden files, you can create new files with the same names and path
 Core customization occurs in `_config.yml`. Aside from the usual configuration variables, you can set a value for the variable `home`, which specifies the page of your site to which you want the home button in the navigation bar to redirect. By default, this is set to the index. In addition, you can set a value for `copyright`, which corresponds to the name of the copyright holder in the notice within the theme's footer. By default, no value is provided for this variable, in which case the whole copyright notice is suppressed. Finally, you can set a value for `indexing`, which tells search engine crawlers whether to index your site. By default, the value is `false`, in which case the following code is placed in the head of every page:
 
 ```html
-<meta name="robots" content="noindex, nofollow" />
+<meta name="robots" content="noindex, nofollow">
 ```
 
 If you set `indexing: true`, however, crawlers will be allowed to index your site and Jekyll will populate the head of every page with SEO tags through the `jekyll-seo-tag` plugin.
