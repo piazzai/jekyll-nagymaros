@@ -74,7 +74,7 @@ Data that appears in the theme's four default pages must be configured via YAML 
 
 The order of appearance of pages in the theme's navigation bar is determined by the value of `navorder` set in each page's front matter. For example, setting `navorder: 1` will make the page appear first in the list. Note that a page will only appear in the navigation bar if the `navorder` variable is set, so it is possible to hide some pages from navigation simply by not giving this variable a value.
 
-Customizing the CSS is possible by creating a file `_sass/_custom.scss` that contains your own code. You can use this both to define new styles or to overwrite the theme's defaults. The file will be automatically compiled during build. 
+Customizing the CSS is possible by creating a file `_sass/_custom.scss`. You can use this both to define new styles or to overwrite the theme's defaults. The file will be automatically compiled during build. 
 
 ## Credits
 
