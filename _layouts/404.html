@@ -2,13 +2,15 @@
 layout: default
 ---
 
+{% include metadata.liquid %}
+
 <main>
     <div class="container text-center">
         {% assign span = 'class="h1 bg-gray-3 color-gray-0 rounded" id="digit"' %}
         <span {{ span }}>4</span>
         <span {{ span }}>0</span>
         <span {{ span }}>4</span>
-        <h1 class="display-5">Page not found</h1>
-        <p class="fs-5"><a href="{{ '/' | relative_url }}">Return to the homepage</a></p>
+        <h1 class="display-5">{{ title }}</h1>
+        <p class="fs-5"><a href="{{ '/' | relative_url }}">Go back</a></p>
     </div>
 </main>
