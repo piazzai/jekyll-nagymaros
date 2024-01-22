@@ -1,13 +1,14 @@
-title: Your awesome title
-description: An awesome description for your new site
+title: Nagymaros Theme
+description: Jekyll theme for a conference website
 baseurl: ""
-url: ""
-permalink: pretty
+url: https://piazzai.github.io/jekyll-nagymaros
 
 theme: jekyll-nagymaros
 
 copyright: Place Holder
 indexing: true
+
+permalink: pretty
 
 exclude:
   - LICENSE
