@@ -1,12 +1,7 @@
 <header class="bg-gray-4">
     <div class="container">
         <nav class="navbar navbar-expand-sm">
-            {% if site.home %}
-            {% assign home = site.home | relative_url %}
-            {% else %}
-            {% assign home = '/' | relative_url %}
-            {% endif %}
-            <a class="navbar-brand" href="{{ home }}">{{ site.title }}</a>
+            <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
