@@ -68,7 +68,7 @@ Core customization occurs in `_config.yml`. Aside from the usual configuration v
 <meta name="robots" content="none">
 ```
 
-If you set the value to `true`, however, the above code will not be included, so that crawlers will be allowed to index your site, and Jekyll will populate the head of every page with SEO tags through the `jekyll-seo-tag` plugin.
+If you set the value to `true`, however, the above code will not be included, crawlers will be allowed to index your site, and Jekyll will populate the head of every page with SEO tags through the `jekyll-seo-tag` plugin.
 
 Data that appears in the theme's four default pages must be configured via YAML files located in the `_data` folder. See the corresponding files in `demo/_data` to understand how to write your own YAML, or better yet, clone these files and edit them.
 
