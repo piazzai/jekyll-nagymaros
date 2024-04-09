@@ -74,7 +74,44 @@ Data that appears in the theme's four default pages must be configured via YAML 
 
 The order of appearance of pages in the theme's navigation bar is determined by the value of `navorder` set in each page's front matter. For example, setting `navorder: 1` will make the page appear first in the list. Note that a page will only appear in the navigation bar if the `navorder` variable is set, so it is possible to hide some pages from navigation simply by not giving this variable a value.
 
-Customizing the CSS is possible by creating a file `_sass/_custom.scss`. You can use this both to define new styles or to overwrite the theme's defaults. The file will be automatically compiled during build. 
+Customizing the CSS is possible by creating a file `_sass/_custom.scss`. You can use this both to define new styles or to overwrite the theme's defaults. The file will be automatically compiled during build. For convenience, the customization of the theme's color scheme is also possible via YAML variables: in this case, create a file called `_data/skin.yml` and assign new colors using the [Open Color](https://yeun.github.io/open-color) naming convention.
+
+Here is an example file:
+
+```yaml
+a:
+  color: blue-7
+  hover: blue-9
+body:
+  bg: gray-0
+  color: gray-8
+btn-primary:
+  bg: blue-5
+  color: gray-0
+  hover: blue-7
+  disabled: blue-3
+btn-secondary:
+  bg: gray-4
+  color: gray-0
+  hover: gray-6
+digit:
+  bg: gray-3
+header:
+  bg: gray-4
+index:
+  bg: gray-2
+navbar-brand:
+  color: gray-8
+  hover: gray-9
+nav-link:
+  color: gray-7
+  hover: gray-9
+text-muted:
+  color: gray-6
+  hover: gray-9
+```
+
+These are actually the theme's defaults. If no value is provided for some of these variables, or if `_data/skin.yml` does not exist at all, the theme will default to the color scheme above.
 
 ## Credits
 
