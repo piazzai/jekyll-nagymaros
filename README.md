@@ -74,9 +74,9 @@ Data that appears in the theme's four default pages must be configured via YAML 
 
 The order of appearance of pages in the theme's navigation bar is determined by the value of `navorder` set in each page's front matter. For example, setting `navorder: 1` will make the page appear first in the list. Note that a page will only appear in the navigation bar if the `navorder` variable is set, so it is possible to hide some pages from navigation simply by not giving this variable a value.
 
-Customizing the CSS is possible by creating a file `_sass/_custom.scss`. You can use this both to define new styles or to overwrite the theme's defaults. The file will be automatically compiled during build. For convenience, the customization of the theme's color scheme is also possible via YAML variables: in this case, create a file called `_data/skin.yml` and assign new colors using the [Open Color](https://yeun.github.io/open-color) naming convention.
+Customizing the CSS is possible by creating a file `_sass/_custom.scss`. You can use this both to define new styles or to overwrite the theme's defaults. The file will be automatically compiled during build.
 
-Here is an example file:
+For convenience, the customization of the theme's color scheme is also possible via YAML: in this case, create a file called `skin.yml` in your `_data` folder and assign new colors from the [Open Color](https://yeun.github.io/open-color) library using the `(color)-(number)` convention. Here is an example:
 
 ```yaml
 a:
@@ -111,11 +111,11 @@ text-muted:
   hover: gray-9
 ```
 
-These are actually the theme's defaults. If no value is provided for some of these variables, or if `_data/skin.yml` does not exist at all, the theme will default to the color scheme above.
+These are actually the theme's defaults. If no value is provided for some of these variables, or if `_data/skin.yml` does not exist at all, the theme will assume the colors above.
 
 ## Credits
 
-The theme builds on the following projects:
+This theme builds on the following projects:
 
 - [Bootstrap](https://getbootstrap.com/)
 - [Inter](https://rsms.me/inter/)
@@ -126,4 +126,4 @@ The theme builds on the following projects:
 
 ## Bugs
 
-If you find any problem using this theme, please [open an issue](https://github.com/piazzai/jekyll-nagymaros/issues).
+If you find any problem using the theme, please [open an issue](https://github.com/piazzai/jekyll-nagymaros/issues).
