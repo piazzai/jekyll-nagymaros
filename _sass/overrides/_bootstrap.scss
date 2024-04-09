@@ -1,44 +1,44 @@
 a {
-  color: var(--oc-blue-7);
+  color: $a_color;
   text-decoration: none;
 
   &:hover {
-    color: var(--oc-blue-9);
+    color: $a_hover;
   }
 }
 
 body {
-  background-color: var(--oc-gray-0);
-  color: var(--oc-gray-8);
+  background-color: $body_bg;
+  color: $body_color;
   font-family: "Inter", var(--bs-font-sans-serif);
   font-size: 1.15rem;
 }
 
 .btn-primary {
-  background-color: var(--oc-blue-5) !important;
+  background-color: $btn-primary_bg !important;
   border-color: transparent !important;
-  color: var(--oc-gray-0);
+  color: $btn-primary_color !important;
 
   &:hover,
   &:active,
   &.active {
-    background-color: var(--oc-blue-7) !important;
+    background-color: $btn-primary_hover !important;
   }
 
   &.disabled {
-    background-color: var(--oc-blue-3) !important;
+    background-color: $btn-primary_disabled !important;
   }
 }
 
 .btn-secondary {
-  background-color: var(--oc-gray-4) !important;
+  background-color: $btn-secondary_bg !important;
   border-color: transparent !important;
-  color: var(--oc-gray-0);
+  color: $btn-secondary_color !important;
 
   &:hover,
   &:active,
   &.active {
-    background-color: var(--oc-gray-6) !important;
+    background-color: $btn-secondary_hover !important;
   }
 }
 
@@ -53,29 +53,29 @@ body {
 }
 
 .navbar-brand {
-  color: var(--oc-gray-8);
+  color: $navbar-brand_color;
 
   &:hover {
-    color: var(--oc-gray-9);
+    color: $navbar-brand_hover;
   }
 }
 
 .nav-link {
-  color: var(--oc-gray-7);
+  color: $nav-link_color;
 
   &:hover {
-    color: var(--oc-gray-9);
+    color: $nav-link_hover;
   }
 }
 
 .text-muted {
-  color: var(--oc-gray-6) !important;
+  color: $text-muted_color !important;
 
   a {
     color: inherit;
 
     &:hover {
-      color: var(--oc-gray-9);
+      color: $text-muted_hover;
     }
   }
 }

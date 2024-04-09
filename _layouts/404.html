@@ -3,10 +3,11 @@ layout: default
 ---
 
 {% include metadata.liquid %}
+{% assign digit_bg = site.data.skin.digit.bg | default: 'gray-3' %}
 
 <main>
     <div class="container text-center">
-        {% assign span = 'class="h1 bg-gray-3 color-gray-0 rounded" id="digit"' %}
+        {% assign span = 'class="h1 bg-' | append: digit_bg | append: ' color-gray-0 rounded" id="digit"' %}
         <span {{ span }}>4</span>
         <span {{ span }}>0</span>
         <span {{ span }}>4</span>

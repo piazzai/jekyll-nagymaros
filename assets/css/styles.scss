@@ -5,7 +5,24 @@
 @import "utilities";
 @import "elements";
 
+$a_color: var(--oc-{{ site.data.skin.a.color | default: 'blue-7' }});
+$a_hover: var(--oc-{{ site.data.skin.a.hover | default: 'blue-9' }});
+$body_bg: var(--oc-{{ site.data.skin.body.bg | default: 'gray-0' }});
+$body_color: var(--oc-{{ site.data.skin.body.color | default: 'gray-8' }});
+$btn-primary_bg: var(--oc-{{ site.data.skin.btn-primary.bg | default: 'blue-5' }});
+$btn-primary_color: var(--oc-{{ site.data.skin.btn-primary.color | default: 'gray-0' }});
+$btn-primary_hover: var(--oc-{{ site.data.skin.btn-primary.hover | default: 'blue-7' }});
+$btn-primary_disabled: var(--oc-{{ site.data.skin.btn-primary.disabled | default: 'blue-3' }});
+$btn-secondary_bg: var(--oc-{{ site.data.skin.btn-secondary.bg | default: 'gray-4' }});
+$btn-secondary_color: var(--oc-{{ site.data.skin.btn-secondary.color | default: 'gray-0' }});
+$btn-secondary_hover: var(--oc-{{ site.data.skin.btn-secondary.hover | default: 'gray-6' }});
+$navbar-brand_color: var(--oc-{{ site.data.skin.navbar-brand.color | default: 'gray-8' }});
+$navbar-brand_hover: var(--oc-{{ site.data.skin.navbar-brand.hover | default: 'gray-9' }});
+$nav-link_color: var(--oc-{{ site.data.skin.nav-link.color | default: 'gray-7' }});
+$nav-link_hover: var(--oc-{{ site.data.skin.nav-link.hover | default: 'gray-9' }});
+$text-muted_color: var(--oc-{{ site.data.skin.text-muted.color | default: 'gray-6' }});
+$text-muted_hover: var(--oc-{{ site.data.skin.text-muted.hover | default: 'gray-9' }});
+
 @import "overrides/bootstrap";
 @import "overrides/leaflet";
-
 @import "custom";

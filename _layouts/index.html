@@ -4,9 +4,10 @@ layout: default
 
 {% include metadata.liquid %}
 {% include header.html %}
+{% assign index_bg = site.data.skin.index.bg  | default: 'gray-2' %}
 
 <main class="my-4">
-    <div class="container px-5 py-3 bg-gray-2 rounded">
+    <div class="container px-5 py-3 bg-{{ index_bg }} rounded">
         <h1 class="display-3">{{ title }}</h1>
         <p class="lead">{{ description }}</p>
         <hr class="my-4">
