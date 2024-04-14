@@ -27,12 +27,12 @@ layout: default
                 <div class="{{ classes }}">
                     <div class="btn {{ control }} p-0 aos-init aos-animate" role="tablist" data-aos="fade-up">
                         {% for day in site.data.program.days %}
-                        {% assign slug = day.name | slugify %}
+                        {% assign id = forloop.index | prepend: 'day-' %}
                         {% assign classes = 'btn btn-secondary' %}
                         {% if forloop.first %}
                         {% assign classes = classes | append: ' active' %}
                         {% endif %}
-                        <button type="button" class="{{ classes }}" data-bs-toggle="tab" data-bs-target="#{{ slug }}" role="tab" aria-controls="{{ slug }}" aria-selected="true">
+                        <button type="button" class="{{ classes }}" data-bs-toggle="tab" data-bs-target="#{{ id }}" role="tab" aria-controls="{{ id }}" aria-selected="true">
                             <span class="fs-5">{{ day.name }}</span>
                         </button>
                         {% endfor %}
@@ -46,13 +46,13 @@ layout: default
             {% endif %}
             <div class="col-lg-{{ width }}">
                 {% for day in site.data.program.days %}
-                {% assign slug = day.name | slugify %}
+                {% assign id = forloop.index | prepend: 'day-' %}
                 {% assign classes = 'tab-pane fade' %}
                 {% if forloop.first %}
                 {% assign classes = classes | append: ' active show' %}
                 {% endif %}
                 <div class="tab-content aos-init aos-animate" data-aos="fade-up">
-                    <div class="{{ classes }}" id="{{ slug }}" role="tabpanel" aria-labelledby="{{ slug }}-tab">
+                    <div class="{{ classes }}" id="{{ id }}" role="tabpanel" aria-labelledby="{{ id }}-tab">
                         {% assign categories = site.data.program.legend.categories %}
                         <ul class="list-unstyled lh-sm">
                             {% for event in day.events %}
