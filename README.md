@@ -9,7 +9,7 @@ Nagymaros is a [Jekyll](https://jekyllrb.com) theme designed for conferences, wo
 
 The theme is based on [Bootstrap 5](https://getbootstrap.com/), which makes it mobile-first and fully responsive. Body text is set in Inter, a clean sans-serif typeface that guarantees readability at small screen sizes. A slab-serif typeface, Zilla Slab, is used instead in display headings. The layout is adapted from [jekyll-conference-theme](https://github.com/DigitaleGesellschaft/jekyll-theme-conference) and remains quite similar to it, but compared to this theme, Nagymaros aims to be simpler and easier to customize.
 
-See the [demo](https://jekyll-nagymaros.netlify.app) to find out what the theme looks like.
+See the [demo](https://piazzai.github.io/jekyll-nagymaros/) to find out what the theme looks like.
 
 ![](https://github.com/piazzai/jekyll-nagymaros/blob/master/screenshot.png)
 
