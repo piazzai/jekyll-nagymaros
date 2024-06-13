@@ -15,7 +15,6 @@ $colors: (
 );
 
 $breaks: (
-  "xs": 0,
   "sm": 576,
   "md": 768,
   "lg": 992,
@@ -52,10 +51,14 @@ $breaks: (
 }
 
 @each $break, $break-value in $breaks {
-  @for $scale from 0 through 5 {
-    .border-#{$break}-#{$scale} {
-      @media (min-width: #{$break-value}px) {
-        border-width: #{$scale} !important;
+  @media (min-width: #{$break-value}px) {
+    .border-#{$break}-0 {
+      border-width: 0 !important;
+    }
+
+    @for $width from 1 through 5 {
+      .border-#{$break}-#{$width} {
+        border-width: #{$width}px !important;
       }
     }
   }
