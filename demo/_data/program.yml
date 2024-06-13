@@ -39,6 +39,7 @@ days:
         title: Tempor incididunt
         subtitle: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         category: A category
+        paper: /link/to/paper-1.pdf
       - time: 11:00 to 13:00
         title: Ut labore et dolore
         subtitle: Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
@@ -49,8 +50,14 @@ days:
         title: Magna aliqua
         subtitle: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
         category: Yet another category
+        paper: /link/to/paper-2.pdf
+        slides: /link/to/slides.pdf
       - time: 16:00 to 18:00
         title: Poster presentations
         category: Yet another category
+        poster:
+          - /link/to/poster-a.pdf
+          - /link/to/poster-b.pdf
+          - /link/to/poster-c.pdf
       - time: 18:00 to 19:00
         title: Closing
