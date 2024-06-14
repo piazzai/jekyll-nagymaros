@@ -3,9 +3,9 @@ description: Jekyll theme for a conference website
 baseurl: /jekyll-nagymaros
 url: https://piazzai.github.io
 
-permalink: pretty
 theme: jekyll-nagymaros
 
+permalink: pretty
 copyright: Place Holder
 indexing: true
 
