@@ -1,7 +1,7 @@
 <header class="bg-{{ site.data.skin.header.bg | default: 'gray-4' }}">
     <div class="container">
         <nav class="navbar navbar-expand-sm">
-            <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
+            <a class="navbar-brand" href="{{ site.url | append: site.baseurl }}">{{ site.title }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -11,11 +11,10 @@
                     {% for link in links %}
                     {% if link.navorder %}
                     {% assign current = link.name | split: '.' | first %}
-                    {% assign href = link.url | prepend: site.url %}
                     {% if page.layout == current %}
-                    <a class="nav-link active" aria-current="page" href="{{ href }}">{{ link.title }}</a>
+                    <a class="nav-link active" aria-current="page" href="{{ link.url | relative_url }}">{{ link.title }}</a>
                     {% else %}
-                    <a class="nav-link" href="{{ href }}">{{ link.title }}</a>
+                    <a class="nav-link" href="{{ link.url | relative_url }}">{{ link.title }}</a>
                     {% endif %}
                     {% endif %}
                     {% endfor %}

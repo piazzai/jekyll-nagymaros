@@ -11,8 +11,8 @@
     <title>{{ site.title | append: ' | ' | append: site.description }}</title>
     {% endif %}
     {% endif %}
-    <link rel="stylesheet" href="{{ '/assets/css/bootstrap.css' | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/leaflet.css' | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/open-color.css' | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ 'assets/css/bootstrap.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/css/leaflet.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/css/open-color.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
 </head>
