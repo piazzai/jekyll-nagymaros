@@ -3,12 +3,11 @@ description: Jekyll theme for a conference website
 baseurl: /jekyll-nagymaros
 url: https://piazzai.github.io
 
+permalink: pretty
 theme: jekyll-nagymaros
 
 copyright: Place Holder
 indexing: true
-
-permalink: pretty
 
 exclude:
   - LICENSE
