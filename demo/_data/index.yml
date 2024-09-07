@@ -2,7 +2,7 @@ alerts:
   - title: "Hello!"
     text: Welcome to your new conference website.
     color: green-1
-  - text: You can have many alerts, with different colors. This is the default.
+  - text: You can have multiple alerts, with different colors. This is the default.
 buttons:
   - text: GitHub
     url: https://github.com/piazzai/jekyll-nagymaros
