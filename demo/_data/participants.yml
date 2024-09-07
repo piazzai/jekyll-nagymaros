@@ -6,15 +6,18 @@ groups:
       - name: Aptenodytes
         surname: Patagonicus
         email: king@pengu.in
+        affil: University of Antarctica
       - name: Aptenodytes
         surname: Forsteri
         email: emperor@pengu.in
+        affil: Subantarctic College
   - title: Local organizer
     columns: false
     members:
       - name: Pygoscelis
         surname: Papua
         email: gentoo@pengu.in
+        affil: Falkland University
   - title: Participants
     sort: true
     columns: true

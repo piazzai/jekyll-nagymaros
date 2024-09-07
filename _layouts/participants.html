@@ -30,10 +30,11 @@ layout: default
                 {% endif %}
                 {% for member in members %}
                 {% assign full = member.name | append: ' ' | append: member.surname %}
+                {% assign affil = member.affil %}
                 {% if member.email %}
-                <li class="fw-light"><a href="mailto:{{ member.email }}">{{ full }}</a></li>
+                <li><a href="mailto:{{ member.email }}">{{ full }}</a> <small class="text-muted">{{ affil }}</small></li>
                 {% else %}
-                <li class="fw-light">{{ full }}</li>
+                <li>{{ full }} <small class="text-muted">{{ affil }}</small></li>
                 {% endif %}
                 {% endfor %}
             </ul>
