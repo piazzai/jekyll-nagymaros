@@ -1,5 +1,6 @@
 groups:
   - title: Scientific committee
+    sort: false
     columns: false
     members:
       - name: Aptenodytes
@@ -15,6 +16,7 @@ groups:
         surname: Papua
         email: gentoo@pengu.in
   - title: Participants
+    sort: true
     columns: true
     members:
       - name: Pygoscelis

@@ -23,7 +23,11 @@ layout: default
         {% endif %}
         <div {{ div }}>
             <ul class="list-unstyled">
-                {% assign members = group.members | sort_natural: 'surname' %}
+                {% if group.sort %}
+                {% assign members = group.members | sort_natural: 'name' %}
+                {% else %}
+                {% assign members = group.members %}
+                {% endif %}
                 {% for member in members %}
                 {% assign full = member.name | append: ' ' | append: member.surname %}
                 {% if member.email %}
