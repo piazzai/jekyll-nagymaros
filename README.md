@@ -2,10 +2,10 @@
 
 Nagymaros is a [Jekyll](https://jekyllrb.com) theme designed for conferences, workshops, meetings, and similar events. It has a simple and intuitive structure featuring four pages that provide key information about the event:
 
-- An index, meant for basic details and links to external sources, such as submission systems.
+- An index for alerts, basic details, and links to external sources such as submission systems.
 - A program, allowing for single or multi-day schedules and color-coded event categories.
 - A map of conference locations, customizable with markers, areas, and tooltips.
-- An alphabetical list of participants, with optional roles and email addresses.
+- An alphabetical list of participants, with optional roles, affiliations, and email addresses.
 
 The theme is based on [Bootstrap 5](https://getbootstrap.com/), which makes it mobile-first and fully responsive. Body text is set in Inter, a clean sans-serif typeface that guarantees readability at small screen sizes. A slab-serif typeface, Zilla Slab, is used instead in display headings. The layout is adapted from [jekyll-conference-theme](https://github.com/DigitaleGesellschaft/jekyll-theme-conference) and remains quite similar to it, but compared to this theme, Nagymaros aims to be simpler and easier to customize.
 
