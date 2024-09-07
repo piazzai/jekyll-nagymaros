@@ -13,6 +13,7 @@ indexing: true
 exclude:
   - LICENSE
   - README.md
+  - Gemfile
   - vendor/
 
 plugins:
