@@ -34,9 +34,9 @@ layout: default
         <div class="btn-group-lg mt-4 mb-3" role="group">
             {% assign buttons = site.data.index.buttons %}
             {% for button in buttons %}
-            {% assign classes = 'btn btn-primary d-block d-lg-inline-block my-lg-0' %}
-            {% unless forloop.first or forloop.last %}
-            {% assign classes = classes | append: ' my-2 mx-lg-2' %}
+            {% assign classes = 'btn btn-primary d-block d-lg-inline-block my-lg-0 my-2' %}
+            {% unless forloop.last %}
+            {% assign classes = classes | append: ' me-lg-2' %}
             {% endunless %}
             {% if button.disabled %}
             {% assign classes = classes | append: ' disabled' %}
