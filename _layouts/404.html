@@ -5,9 +5,9 @@ layout: default
 {% include metadata.liquid %}
 {% assign digit_bg = site.data.skin.digit.bg | default: 'gray-3' %}
 {% if site.home %}
-{% assign return = site.home | append: '/' | prepend: '/' | prepend: site.url %}
+{% assign return = site.home | relative_url %}
 {% else %}
-{% assign return = site.url %}
+{% assign return = '/' | relative_url %}
 {% endif %}
 
 <main>

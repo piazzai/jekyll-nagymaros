@@ -1,7 +1,7 @@
 {% if site.home %}
-{% assign return = site.home | append: '/' | prepend: '/' | prepend: site.url %}
+{% assign return = site.home | relative_url %}
 {% else %}
-{% assign return = site.url %}
+{% assign return = '/' | relative_url %}
 {% endif %}
 
 <header class="bg-{{ site.data.skin.header.bg | default: 'gray-4' }}">
@@ -17,7 +17,7 @@
                     {% for link in links %}
                     {% if link.navorder %}
                     {% assign current = link.name | split: '.' | first %}
-                    {% assign href = link.url | prepend: site.url %}
+                    {% assign href = link.url | relative_url %}
                     {% if page.layout == current %}
                     <a class="nav-link active" aria-current="page" href="{{ href }}">{{ link.title }}</a>
                     {% else %}
