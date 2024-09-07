@@ -11,10 +11,11 @@
                     {% for link in links %}
                     {% if link.navorder %}
                     {% assign current = link.name | split: '.' | first %}
+                    {% assign href = link.url | prepend: site.url %}
                     {% if page.layout == current %}
-                    <a class="nav-link active" aria-current="page" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+                    <a class="nav-link active" aria-current="page" href="{{ href }}">{{ link.title }}</a>
                     {% else %}
-                    <a class="nav-link" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+                    <a class="nav-link" href="{{ href }}">{{ link.title }}</a>
                     {% endif %}
                     {% endif %}
                     {% endfor %}
