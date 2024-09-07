@@ -1,7 +1,13 @@
+{% if site.home %}
+{% assign return = site.home | append: '/' | prepend: '/' | prepend: site.url %}
+{% else %}
+{% assign return = site.url %}
+{% endif %}
+
 <header class="bg-{{ site.data.skin.header.bg | default: 'gray-4' }}">
     <div class="container">
         <nav class="navbar navbar-expand-sm">
-            <a class="navbar-brand" href="{{ site.url | append: site.baseurl }}">{{ site.title }}</a>
+            <a class="navbar-brand" href="{{ return }}">{{ site.title }}</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

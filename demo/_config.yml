@@ -6,6 +6,7 @@ url: https://piazzai.github.io
 permalink: pretty
 theme: jekyll-nagymaros
 
+# home: index
 copyright: Place Holder
 indexing: true
 

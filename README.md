@@ -61,7 +61,7 @@ To customize hidden files, you can create new files with the same names and path
 
 ## Usage
 
-Core customization occurs in `_config.yml`. Aside from the usual configuration variables, you can set a value for `copyright`, which corresponds to the name of the copyright holder in the notice within the theme's footer. If no value is provided for this variable, the whole copyright notice is suppressed (this is the default). Finally, you can set a value for `indexing`, which tells search engine crawlers whether to index your site. The default value is `false`, and in this case the following code is included in the head of every page:
+Core customization occurs in `_config.yml`. Aside from the usual configuration variables, you can set a value for `home`, which will determine the destination of the site title button in the header, as well as the return link from the 404 page. Next, you can set a value for `copyright`, which corresponds to the name of the copyright holder in the notice within the theme's footer. If no value is provided for this variable, the whole copyright notice is suppressed (default). Finally, you can set a value for `indexing`, which tells search engine crawlers whether to index your site. The default value is `false`, and in this case the following code is included in the head of every page:
 
 ```html
 <meta name="robots" content="none">
