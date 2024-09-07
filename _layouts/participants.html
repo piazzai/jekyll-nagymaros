@@ -9,9 +9,9 @@ layout: default
     <div class="container">
         <h1 class="display-5">{{ title }}</h1>
         {{ content }}
-        {% if site.data.contributors %}
+        {% if site.data.participants %}
         <hr class="my-4">
-        {% assign groups = site.data.contributors.groups %}
+        {% assign groups = site.data.participants.groups %}
         {% for group in groups %}
         {% if group.title %}
         <h5 class="fw-normal">{{ group.title }}</h5>

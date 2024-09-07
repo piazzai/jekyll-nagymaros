@@ -5,7 +5,7 @@ Nagymaros is a [Jekyll](https://jekyllrb.com) theme designed for conferences, wo
 - An index, meant for basic details and links to external sources, such as submission systems.
 - A program, allowing for single or multi-day schedules and color-coded event categories.
 - A map of conference locations, customizable with markers, areas, and tooltips.
-- An alphabetical list of contributors, with optional roles and email addresses.
+- An alphabetical list of participants, with optional roles and email addresses.
 
 The theme is based on [Bootstrap 5](https://getbootstrap.com/), which makes it mobile-first and fully responsive. Body text is set in Inter, a clean sans-serif typeface that guarantees readability at small screen sizes. A slab-serif typeface, Zilla Slab, is used instead in display headings. The layout is adapted from [jekyll-conference-theme](https://github.com/DigitaleGesellschaft/jekyll-theme-conference) and remains quite similar to it, but compared to this theme, Nagymaros aims to be simpler and easier to customize.
 
@@ -23,15 +23,15 @@ If you choose to install the theme as a gem, your site should include at a minim
 .
 ├── 404.md
 ├── _config.yml
-├── contributors.md
+├── participants.md
 ├── _data
-│   ├── contributors.yml
+│   ├── participants.yml
 │   ├── index.yml
-│   ├── locations.yml
+│   ├── map.yml
 │   └── program.yml
 ├── Gemfile
 ├── index.md
-├── locations.md
+├── map.md
 └── program.md
 
 ```
