@@ -31,18 +31,18 @@ L.marker([{{ marker.latlng }}])
 {% endfor %}
 {% endif %}
 
-{% if site.data.map.areas %}
-{% for area in site.data.map.areas %}
-{% assign latlng = area.latlng | join: '],[' | prepend: '[' | append: ']' %}
-{% assign color = area.color | default: '#ff6b6b' %}
-{% assign offset = area.offset | default: '0, 0' %}
+{% if site.data.map.polygons %}
+{% for polygon in site.data.map.polygons %}
+{% assign latlng = polygon.latlng | join: '],[' | prepend: '[' | append: ']' %}
+{% assign color = polygon.color | default: '#ff6b6b' %}
+{% assign offset = polygon.offset | default: '0, 0' %}
 {% assign x = offset | split: ', ' | first %}
 {% assign y = offset | split: ', ' | last %}
 {% assign content = false %}
-{% if area.title %}
-{% assign content = area.title | prepend: '<strong>' | append: '</strong>' %}
+{% if polygon.title %}
+{% assign content = polygon.title | prepend: '<strong>' | append: '</strong>' %}
 {% endif %}
-{% for line in area.text %}
+{% for line in polygon.text %}
 {% if content %}
 {% assign content = content | append: '<br>' | append: line %}
 {% else %}

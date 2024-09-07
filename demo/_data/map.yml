@@ -8,7 +8,7 @@ markers:
   - title: This is a tooltip with no text
     latlng: 47.78691841448565, 18.967277537789023
 
-areas:
+polygons:
   - text:
       - This is a tooltip with no title...
       - ...and with multiple lines of text
