@@ -27,8 +27,7 @@ layout: default
                             <ul class="list-unstyled ms-3 ms-lg-0 lh-sm">
                                 {% for event in day.events %}
                                 {% if event.category %}
-                                {% assign category = categories | find: 'name', event.category %}
-                                {% assign color = category.color %}
+                                {% assign color = categories | where: 'name', event.category | map: 'color' | first %}
                                 {% else %}
                                 {% assign color = 'gray-4' %}
                                 {% endif %}
