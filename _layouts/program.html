@@ -27,8 +27,7 @@ layout: default
                             <ul class="list-unstyled ms-3 ms-lg-0 lh-sm">
                                 {% for event in day.events %}
                                 {% if event.category %}
-                                {% assign category = categories | find: 'name', event.category %}
-                                {% assign color = category.color %}
+                                {% assign color = categories | where: 'name', event.category | map: 'color' | first %}
                                 {% else %}
                                 {% assign color = 'gray-4' %}
                                 {% endif %}
@@ -48,24 +47,24 @@ layout: default
                                         <p class="fw-light m-0">
                                         {% if event.paper.first %}
                                             {% for paper in event.paper %}
-                                            <a href="{{ paper }}" target="_blank">[Paper {{ forloop.index }}]</a>
+                                            <a href="{{ paper | relative_url }}">[Paper {{ forloop.index }}]</a>
                                             {% endfor %}
                                         {% elsif event.paper %}
-                                        <a href="{{ event.paper }}" target="_blank">[Paper]</a>
+                                        <a href="{{ event.paper | relative_url }}">[Paper]</a>
                                         {% endif %}
                                         {% if event.poster.first %}
                                             {% for poster in event.poster %}
-                                            <a href="{{ poster }}" target="_blank">[Poster {{ forloop.index }}]</a>
+                                            <a href="{{ poster | relative_url }}">[Poster {{ forloop.index }}]</a>
                                             {% endfor %}
                                         {% elsif event.poster %}
-                                        <a href="{{ event.poster }}" target="_blank">[Poster]</a>
+                                        <a href="{{ event.poster | relative_url }}">[Poster]</a>
                                         {% endif %}
                                         {% if event.slides.first %}
                                             {% for slides in event.slides %}
-                                            <a href="{{ slides }}" target="_blank">[Slides {{ forloop.index }}]</a>
+                                            <a href="{{ slides | relative_url }}">[Slides {{ forloop.index }}]</a>
                                             {% endfor %}
                                         {% elsif event.slides %}
-                                        <a href="{{ event.slides }}" target="_blank">[Slides]</a>
+                                        <a href="{{ event.slides | relative_url }}">[Slides]</a>
                                         {% endif %}
                                         </p>
                                     </div>

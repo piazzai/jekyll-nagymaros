@@ -7,13 +7,6 @@ a {
   }
 }
 
-.accordion-item {
-  border-color: $accordion-item_border;
-  border-width: 0.15rem;
-  color: inherit;
-  background-color: transparent;
-}
-
 .accordion-button {
   color: inherit;
   background-color: $accordion-button_bg;
@@ -29,6 +22,13 @@ a {
   }
 }
 
+.accordion-item {
+  border-color: $accordion-item_border;
+  border-width: 0.15rem;
+  color: inherit;
+  background-color: transparent;
+}
+
 .alert-primary {
   background-color: $alert-primary_bg;
   border-color: transparent !important;
@@ -38,7 +38,7 @@ a {
 body {
   background-color: $body_bg;
   color: $body_color;
-  font-family: "Inter", var(--bs-font-sans-serif);
+  font-family: "InterVariable", var(--bs-font-sans-serif);
   font-size: 1.15rem;
 }
 

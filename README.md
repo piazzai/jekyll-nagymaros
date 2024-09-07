@@ -2,10 +2,10 @@
 
 Nagymaros is a [Jekyll](https://jekyllrb.com) theme designed for conferences, workshops, meetings, and similar events. It has a simple and intuitive structure featuring four pages that provide key information about the event:
 
-- An index, meant for basic details and links to external sources, such as submission systems.
+- An index for alerts, basic details, and links to external sources such as submission systems.
 - A program, allowing for single or multi-day schedules and color-coded event categories.
 - A map of conference locations, customizable with markers, areas, and tooltips.
-- An alphabetical list of contributors, with optional roles and email addresses.
+- An alphabetical list of participants, with optional roles, affiliations, and email addresses.
 
 The theme is based on [Bootstrap 5](https://getbootstrap.com/), which makes it mobile-first and fully responsive. Body text is set in Inter, a clean sans-serif typeface that guarantees readability at small screen sizes. A slab-serif typeface, Zilla Slab, is used instead in display headings. The layout is adapted from [jekyll-conference-theme](https://github.com/DigitaleGesellschaft/jekyll-theme-conference) and remains quite similar to it, but compared to this theme, Nagymaros aims to be simpler and easier to customize.
 
@@ -23,15 +23,15 @@ If you choose to install the theme as a gem, your site should include at a minim
 .
 ├── 404.md
 ├── _config.yml
-├── contributors.md
 ├── _data
-│   ├── contributors.yml
 │   ├── index.yml
-│   ├── locations.yml
+│   ├── map.yml
+│   ├── participants.yml
 │   └── program.yml
 ├── Gemfile
 ├── index.md
-├── locations.md
+├── map.md
+├── participants.md
 └── program.md
 
 ```
@@ -61,7 +61,11 @@ To customize hidden files, you can create new files with the same names and path
 
 ## Usage
 
-Core customization occurs in `_config.yml`. Aside from the usual configuration variables, you can set a value for `copyright`, which corresponds to the name of the copyright holder in the notice within the theme's footer. If no value is provided for this variable, the whole copyright notice is suppressed (this is the default). Finally, you can set a value for `indexing`, which tells search engine crawlers whether to index your site. The default value is `false`, and in this case the following code is included in the head of every page:
+Core customization occurs in `_config.yml`. Aside from the usual configuration variables, you can set a value for `home`, which will determine the destination of the site title button in the header, as well as the return link from the 404 page. Only use this if you want these buttons to lead somewhere different than the index.
+
+Next, you can set a value for `copyright`, which corresponds to the name of the copyright holder in the notice within the theme's footer. If no value is provided for this variable, the whole copyright notice is suppressed (default).
+
+Finally, you can set a value for `indexing`, which tells search engine crawlers whether to index your site. The default value is `false`, and in this case the following code is included in the head of every page:
 
 ```html
 <meta name="robots" content="none">
@@ -75,7 +79,7 @@ The order of appearance of pages in the theme's navigation bar is determined by 
 
 Customizing the CSS is possible by creating a file `_sass/_custom.scss`. You can use this both to define new styles or to overwrite the theme's defaults. The file will be automatically compiled during build.
 
-For convenience, customization of the theme's color scheme is also possible via YAML. In this case, create a file called `skin.yml` in your `_data` folder and assign new colors from the [Open Color](https://yeun.github.io/open-color) library to various HTML elements using the color-number convention. Here is an example:
+For convenience, customization of the theme's color scheme is also possible via YAML. In this case, create a file `_data/skin.yml` and assign new colors from the [Open Color](https://yeun.github.io/open-color) library to various HTML elements. Make sure to stick to the library's color-number naming convention. Here is an example:
 
 ```yaml
 a:

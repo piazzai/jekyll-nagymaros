@@ -1,15 +1,15 @@
 ---
 ---
 
-{% assign center = site.data.locations.center | default: '47.788542883494856, 18.961139141737842' %}
-{% assign zoom = site.data.locations.zoom | default: 13 %}
+{% assign center = site.data.map.center | default: '47.788542883494856, 18.961139141737842' %}
+{% assign zoom = site.data.map.zoom | default: 13 %}
 
 var map = L.map("map").setView([{{ center }}], {{ zoom }});
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-{% if site.data.locations.markers %}
-{% for marker in site.data.locations.markers %}
+{% if site.data.map.markers %}
+{% for marker in site.data.map.markers %}
 {% assign content = false %}
 {% if marker.title %}
 {% assign content = marker.title | prepend: '<strong>' | append: '</strong>' %}
@@ -31,18 +31,18 @@ L.marker([{{ marker.latlng }}])
 {% endfor %}
 {% endif %}
 
-{% if site.data.locations.areas %}
-{% for area in site.data.locations.areas %}
-{% assign latlng = area.latlng | join: '],[' | prepend: '[' | append: ']' %}
-{% assign color = area.color | default: '#ff6b6b' %}
-{% assign offset = area.offset | default: '0, 0' %}
+{% if site.data.map.polygons %}
+{% for polygon in site.data.map.polygons %}
+{% assign latlng = polygon.latlng | join: '],[' | prepend: '[' | append: ']' %}
+{% assign color = polygon.color | default: '#ff6b6b' %}
+{% assign offset = polygon.offset | default: '0, 0' %}
 {% assign x = offset | split: ', ' | first %}
 {% assign y = offset | split: ', ' | last %}
 {% assign content = false %}
-{% if area.title %}
-{% assign content = area.title | prepend: '<strong>' | append: '</strong>' %}
+{% if polygon.title %}
+{% assign content = polygon.title | prepend: '<strong>' | append: '</strong>' %}
 {% endif %}
-{% for line in area.text %}
+{% for line in polygon.text %}
 {% if content %}
 {% assign content = content | append: '<br>' | append: line %}
 {% else %}
