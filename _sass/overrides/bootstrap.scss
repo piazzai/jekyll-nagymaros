@@ -7,13 +7,6 @@ a {
   }
 }
 
-.accordion-item {
-  border-color: $accordion-item_border;
-  border-width: 0.15rem;
-  color: inherit;
-  background-color: transparent;
-}
-
 .accordion-button {
   color: inherit;
   background-color: $accordion-button_bg;
@@ -27,6 +20,13 @@ a {
     box-shadow: none;
     color: inherit;
   }
+}
+
+.accordion-item {
+  border-color: $accordion-item_border;
+  border-width: 0.15rem;
+  color: inherit;
+  background-color: transparent;
 }
 
 .alert-primary {
