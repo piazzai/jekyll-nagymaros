@@ -120,6 +120,28 @@ caption {
   }
 }
 
+.dropdown-menu {
+  color: $dropdown-menu_color;
+  background-color: $dropdown-menu_bg;
+}
+
+.dropdown-item {
+  color: $dropdown-item_color;
+}
+
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: $dropdown-item_hover;
+  background-color: transparent;
+}
+
+.dropdown-item.disabled,
+.dropdown-item:disabled {
+  color: $dropdown-item_disabled;
+}
+
 .form-control {
   color: $form-control_color;
   background-color: $form-control_bg;

@@ -28,6 +28,11 @@ $btn-secondary_hover: var(--oc-{{ site.data.skin.btn-secondary.hover | default: 
 $caption_color: var(--oc-{{ site.data.skin.caption.color | default: 'gray-6' }});
 $card_border: var(--oc-{{ site.data.skin.card.border | default: 'gray-2' }});
 $card-header_bg: var(--oc-{{ site.data.skin.card-header.bg | default: 'gray-2' }});
+$dropdown-menu_bg: var(--oc-{{ site.data.skin.dropdown-menu.bg | default: 'gray-2' }});
+$dropdown-menu_color: var(--oc-{{ site.data.skin.dropdown-menu.color | default: 'gray-7' }});
+$dropdown-item_color: var(--oc-{{ site.data.skin.dropdown-item.color | default: 'gray-7' }});
+$dropdown-item_hover: var(--oc-{{ site.data.skin.dropdown-item.hover | default: 'gray-9' }});
+$dropdown-item_disabled: var(--oc-{{ site.data.skin.dropdown-item.disabled | default: 'gray-6' }});
 $form-control_bg: var(--oc-{{ site.data.skin.form-control.bg | default: 'gray-0' }});
 $form-control_color: var(--oc-{{ site.data.skin.form-control.color | default: 'gray-9' }});
 $form-control_border: var(--oc-{{ site.data.skin.form-control.border | default: 'gray-3' }});

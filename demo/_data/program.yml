@@ -7,7 +7,6 @@ legend:
       color: red-6
     - name: Yet another category
       color: teal-6
-
 days:
   - name: Day 1
     events:

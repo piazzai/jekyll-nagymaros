@@ -1849,6 +1849,24 @@ caption {
 .display-6 {
   font-family: "Zilla Slab", var(--bs-font-sans-serif); }
 
+.dropdown-menu {
+  color: var(--oc-gray-7);
+  background-color: var(--oc-gray-2); }
+
+.dropdown-item {
+  color: var(--oc-gray-7); }
+
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: var(--oc-gray-9);
+  background-color: transparent; }
+
+.dropdown-item.disabled,
+.dropdown-item:disabled {
+  color: var(--oc-gray-6); }
+
 .form-control {
   color: var(--oc-gray-9);
   background-color: var(--oc-gray-0);
