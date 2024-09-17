@@ -12,7 +12,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navigation">
-                <div class="navbar-nav">
+                <div class="navbar-nav me-auto">
                     {% assign links = site.pages | sort: 'navorder' %}
                     {% for link in links %}
                     {% if link.navorder %}
