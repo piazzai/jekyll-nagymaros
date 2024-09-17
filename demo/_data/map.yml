@@ -1,13 +1,11 @@
 center: 47.788542883494856, 18.961139141737842
 zoom: 13
-
 markers:
   - title: This is a tooltip
     text: It is easily customizable with title and text
     latlng: 47.789169035641905, 18.961446798474288
   - title: This is a tooltip with no text
     latlng: 47.78691841448565, 18.967277537789023
-
 polygons:
   - text:
       - This is a tooltip with no title...
