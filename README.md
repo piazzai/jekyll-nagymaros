@@ -63,7 +63,7 @@ To customize hidden files, you can create new files with the same names and path
 
 Core customization occurs in `_config.yml`. Aside from the usual configuration variables, you can set a value for `home`, which will determine the destination of the site title button in the header, as well as the return link from the 404 page. Only use this if you want these buttons to lead somewhere different than the index.
 
-Next, you can set a value for `copyright`, which corresponds to the name of the copyright holder in the notice within the theme's footer. If no value is provided for this variable, the whole copyright notice is suppressed (default).
+Next, you can set a value for `copyright`, which corresponds to the name of the copyright holder in the notice within the theme's footer. If no value is provided for this variable (default), the whole copyright notice is suppressed.
 
 Finally, you can set a value for `indexing`, which tells search engine crawlers whether to index your site. The default value is `false`, and in this case the following code is included in the head of every page:
 
@@ -82,83 +82,21 @@ Customizing the CSS is possible by creating a file `_sass/_custom.scss`. You can
 For convenience, customization of the theme's color scheme is also possible via YAML. In this case, create a file `_data/skin.yml` and assign new colors from the [Open Color](https://yeun.github.io/open-color) library to various HTML elements. Make sure to stick to the library's color-number naming convention. Here is an example:
 
 ```yaml
-a:
-  color: blue-7           # links
-  hover: blue-9           # links when hovering
-accordion-button:
-  bg: gray-2              # button in accordion component
-accordion-item:
-  border: gray-2          # border of button in accordion component
-alert-primary:
-  bg: blue-1              # primary alert
 body:
   bg: gray-0              # background
   color: gray-8           # body text
-btn-outline-primary:
-  border: blue-5          # outline primary button border
-  color: blue-5           # outline primary button
-  hover:
-    bg: blue-5            # outline primary button when hovering
-    color: gray-0         # outline primary button text when hovering
-  disabled:
-    bg: blue-3            # disabled outline primary button
-    color: blue-3         # disabled outline primary button text
-btn-primary:
-  bg: blue-5              # primary button
-  color: gray-0           # primary button text
-  hover: blue-7           # primary button when hovering
-  disabled: blue-3        # disabled primary button
-btn-secondary:
-  bg: gray-4              # secondary button
-  color: gray-0           # secondary button text
-  hover: gray-6           # secondary button when hovering
-caption:
-  cikir: gray-6           # caption text
-card:
-  border: gray-2          # card component border
-card-header:
-  bg: gray-2              # header of card component
-dropdown-menu:
-  bg: gray-2              # dropdown menu
-  color: gray-7           # dropdown menu text
-dropdown-item:
-  color: gray-7           # dropdown link
-  hover: gray-9           # dropdown link when hovering
-  disabled: gray-6        # disabled dropdown link
+a:
+  color: blue-7           # links
+  hover: blue-9           # links when hovering
 digit:
   bg: gray-3              # background of digit on 404 page
-form-control:
-  bg: gray-0              # form field
-  color: gray-9           # form field text
-  border: gray-3          # form field border
-  focus:
-    bg: gray-0            # focused form field
-    color: gray-9         # focused form field text
-    border: blue-2        # focused form field border
-    shadow: blue-1        # focused form field shadow
-  placeholder: gray-6     # form placeholder text
 header:
   bg: gray-4              # background of navigation bar
 index:
   bg: gray-2              # background of index container
-invalid-feedback: red-9   # form input warning
-navbar-brand:
-  color: gray-8           # website name in header
-  hover: gray-9           # website name in header when hovering
-nav-link:
-  color: gray-7           # navigation links in header
-  hover: gray-9           # navigation links in header when hovering
-svg:
-  fill:                   # svg icons
-table:
-  td:
-    border:               # table row dividers
-text-muted:
-  color: gray-6           # light text
-  hover: gray-9           # light text when hovering (if link)
 ```
 
-The variables are named after the HTML elements they style. The colors to which they are set in this example are actually the theme's defaults. If no value is provided for some variables, or if `_data/skin.yml` does not exist, the theme assumes the color scheme above.
+The variables are named after the HTML elements they style. The colors to which they are set in this example are actually the theme's defaults. If no value is provided for some variables, or if `_data/skin.yml` does not exist, the theme assumes the default colors. See `assets/css/styles.scss` for a complete list of defaults.
 
 ## Credits
 
